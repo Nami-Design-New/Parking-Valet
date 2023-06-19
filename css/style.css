@@ -10,17 +10,17 @@
 }
 
 @font-face {
-  font-family: madani;
+  font-family: IBM;
   font-display: swap;
-  src: url(../webfonts/madani.ttf);
+  src: url(../webfonts/IBMPlexSansArabic-Regular.ttf);
 }
 * {
-  font-family: "madani", Sans-serif;
+  font-family: "IBM", Sans-serif;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   outline: none;
-  direction: ltr;
+  direction: rtl;
   scroll-behavior: smooth;
 }
 
@@ -150,7 +150,7 @@ input {
 [type=number],
 [type=tel],
 [type=url] {
-  direction: ltr;
+  direction: rtl;
 }
 
 .select2-container--default .select2-selection--single {
@@ -316,44 +316,6 @@ button {
   padding: 8px 16px !important;
 }
 
-.lazyDiv {
-  position: relative;
-  overflow: hidden;
-}
-.lazyDiv::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 2;
-  background-color: #000;
-  transition: transform 1.2s 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
-  transform: translateX(0%);
-}
-.lazyDiv.oppositeDir::after {
-  right: unset;
-  left: 0;
-}
-.lazyDiv .lazy {
-  position: relative;
-  z-index: 1;
-  width: 100%;
-}
-.lazyDiv.loaded::after {
-  transform: translateX(100%);
-}
-.lazyDiv.loaded.oppositeDir::after {
-  transform: translateX(-100%);
-}
-.lazyDiv.loaded.down::after {
-  transform: translateY(100%);
-}
-.lazyDiv.loaded.up::after {
-  transform: translateY(-100%);
-}
-
 .preloader {
   background-color: var(--darkColor);
   position: fixed;
@@ -415,14 +377,13 @@ button {
 .parking {
   position: relative;
   display: flex;
-  padding: 100px 50px;
-  gap: 40px;
+  padding: 100px 50px 0px;
+  gap: 100px;
 }
 .parking .parkingCol {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
 }
 .parking .parkingCol .colName {
   font-size: 80px;
@@ -434,19 +395,18 @@ button {
   display: flex;
   flex-direction: column;
   position: relative;
-  padding: 120px 100px 20px;
+  padding: 140px 110px 20px;
   flex: 1;
-  background-color: var(--whiteColor);
 }
 .parking .parkingCol .cars .car {
   border: 1px solid #a0a0a0;
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  transform: rotate(45deg) translate(8px, -38px);
-  margin-top: -70px;
+  transform: rotate(45deg) translate(0px, -80px);
+  margin-top: -93px;
   width: 80px;
-  aspect-ratio: 2/3;
+  aspect-ratio: 1/2;
   flex-direction: column;
   font-size: 30px;
   font-weight: bold;
@@ -455,6 +415,10 @@ button {
   position: relative;
   gap: 4px;
   padding: 6px;
+  transition: var(--transition);
+}
+.parking .parkingCol .cars .car:hover {
+  background-color: var(--darkColor);
 }
 .parking .parkingCol .cars .car::before {
   content: "";
@@ -468,15 +432,15 @@ button {
   z-index: 2;
 }
 .parking .parkingCol .cars .car:nth-child(2n) {
-  margin-top: -58px;
-  transform: rotate(-45deg) translate(-17px, -56px);
+  margin-top: -115px;
+  transform: rotate(-45deg) translate(-8px, -72px);
 }
 .parking .parkingCol .cars .car:nth-child(2n)::before {
   content: "";
   left: calc(0% - 12px);
 }
 .parking .parkingCol .cars .car.reserved {
-  font-size: 20px;
+  font-size: 16px;
   color: gold;
 }
 .parking .parkingCol .cars .car.reserved::after {
@@ -490,4 +454,67 @@ button {
   background-position: center;
   width: 100%;
   height: 100%;
+  flex: 1;
+}
+
+.modal .modal-title {
+  color: #777;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+.modal .modal-title span {
+  font-weight: bold;
+  color: var(--darkColor);
+  font-size: 24px;
+}
+.modal .modal-title .parkName {
+  font-weight: bold;
+  color: var(--whiteColor);
+  font-size: 24px;
+  padding: 4px 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--darkColor);
+  border-radius: 8px;
+  text-transform: uppercase;
+}
+.modal .modal-body {
+  padding-top: 24px;
+}
+.modal form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.modal form .form-control {
+  border-radius: 8px;
+}
+.modal .Btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 24px 16px;
+}
+.modal .Btns .btn {
+  border-radius: 8px;
+  padding: 8px 24px;
+}
+.modal .data {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  text-align: center;
+}
+.modal .data .info {
+  flex: 1 150px;
+}
+.modal .data .info p {
+  font-size: small;
+}
+.modal .data .info h6 {
+  font-weight: bold;
 }/*# sourceMappingURL=style.css.map */

@@ -25,7 +25,7 @@
   <!-- favicon -->
   <link rel="icon" type="image/x-icon" href="img/fav.svg" />
   <!-- bootstrap -->
-  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/bootstrap.rtl.min.css" />
   <!-- main -->
   <link rel="stylesheet" href="css/main.css" />
   <!-- select2 -->
@@ -36,12 +36,10 @@
 
 <body>
   <!-- ================ loader ================= -->
-  <div class="preloader">
+  <!-- <div class="preloader">
     <div class="preloaderImg"></div>
-  </div>
-
+  </div> -->
   <!-- ================ Header ================= -->
-
   <!--(((((((((((((((((((((((()))))))))))))))))))))))-->
   <!--((((((((((((((((((( content )))))))))))))))))))-->
   <!--(((((((((((((((((((((((()))))))))))))))))))))))-->
@@ -50,114 +48,159 @@
       <div class="parkingCol">
         <h1 class="colName"> A </h1>
         <div class="cars">
-          <a href="#!" class="car"> 1 </a>
-          <a href="#!" class="car reserved"> 2 </a>
-          <a href="#!" class="car reserved"> 3 </a>
-          <a href="#!" class="car reserved"> 4 </a>
-          <a href="#!" class="car"> 5 </a>
-          <a href="#!" class="car"> 6 </a>
-          <a href="#!" class="car"> 7 </a>
-          <a href="#!" class="car"> 8 </a>
-          <a href="#!" class="car"> 9 </a>
-          <a href="#!" class="car"> 10 </a>
-          <a href="#!" class="car"> 11 </a>
+          <a href="#!" class="car" data-bs-toggle="modal" data-bs-target="#addCar"> 1 </a>
+          <a href="#!" class="car reserved" data-bs-toggle="modal" data-bs-target="#takeCar"> 2 </a>
+          <a href="#!" class="car reserved" data-bs-toggle="modal" data-bs-target="#takeCar"> 3 </a>
+          <a href="#!" class="car reserved" data-bs-toggle="modal" data-bs-target="#takeCar"> 4 </a>
+          <a href="#!" class="car" data-bs-toggle="modal" data-bs-target="#addCar"> 5 </a>
+          <a href="#!" class="car" data-bs-toggle="modal" data-bs-target="#addCar"> 6 </a>
+          <a href="#!" class="car" data-bs-toggle="modal" data-bs-target="#addCar"> 7 </a>
+          <a href="#!" class="car" data-bs-toggle="modal" data-bs-target="#addCar"> 8 </a>
+          <a href="#!" class="car" data-bs-toggle="modal" data-bs-target="#addCar"> 9 </a>
+          <a href="#!" class="car" data-bs-toggle="modal" data-bs-target="#addCar"> 10 </a>
+          <a href="#!" class="car" data-bs-toggle="modal" data-bs-target="#addCar"> 11 </a>
         </div>
       </div>
-
       <div class="parkingCol">
         <h1 class="colName"> B </h1>
         <div class="cars">
-          <a href="#!" class="car"> 1 </a>
-          <a href="#!" class="car"> 2 </a>
-          <a href="#!" class="car"> 3 </a>
-          <a href="#!" class="car"> 4 </a>
-          <a href="#!" class="car"> 5 </a>
-          <a href="#!" class="car"> 6 </a>
-          <a href="#!" class="car"> 7 </a>
-          <a href="#!" class="car"> 8 </a>
-          <a href="#!" class="car"> 9 </a>
-          <a href="#!" class="car"> 10 </a>
-          <a href="#!" class="car"> 11 </a>
+          <a href="#!" class="car reserved" data-bs-toggle="modal" data-bs-target="#takeCar"> 1 </a>
+          <a href="#!" class="car" data-bs-toggle="modal" data-bs-target="#addCar"> 2 </a>
+          <a href="#!" class="car" data-bs-toggle="modal" data-bs-target="#addCar"> 3 </a>
+          <a href="#!" class="car" data-bs-toggle="modal" data-bs-target="#addCar"> 4 </a>
+          <a href="#!" class="car" data-bs-toggle="modal" data-bs-target="#addCar"> 5 </a>
+          <a href="#!" class="car" data-bs-toggle="modal" data-bs-target="#addCar"> 6 </a>
+          <a href="#!" class="car" data-bs-toggle="modal" data-bs-target="#addCar"> 7 </a>
+          <a href="#!" class="car" data-bs-toggle="modal" data-bs-target="#addCar"> 8 </a>
+          <a href="#!" class="car" data-bs-toggle="modal" data-bs-target="#addCar"> 9 </a>
+          <a href="#!" class="car reserved" data-bs-toggle="modal" data-bs-target="#takeCar"> 10 </a>
+          <a href="#!" class="car reserved" data-bs-toggle="modal" data-bs-target="#takeCar"> 11 </a>
         </div>
       </div>
-
       <div class="parkingCol">
         <h1 class="colName"> C </h1>
         <div class="cars">
-          <a href="#!" class="car"> 1 </a>
-          <a href="#!" class="car"> 2 </a>
-          <a href="#!" class="car"> 3 </a>
-          <a href="#!" class="car"> 4 </a>
-          <a href="#!" class="car"> 5 </a>
-          <a href="#!" class="car"> 6 </a>
-          <a href="#!" class="car"> 7 </a>
-          <a href="#!" class="car"> 8 </a>
-          <a href="#!" class="car"> 9 </a>
-          <a href="#!" class="car"> 10 </a>
-          <a href="#!" class="car"> 11 </a>
+          <a href="#!" class="car" data-bs-toggle="modal" data-bs-target="#addCar"> 1 </a>
+          <a href="#!" class="car" data-bs-toggle="modal" data-bs-target="#addCar"> 2 </a>
+          <a href="#!" class="car" data-bs-toggle="modal" data-bs-target="#addCar"> 3 </a>
+          <a href="#!" class="car" data-bs-toggle="modal" data-bs-target="#addCar"> 4 </a>
+          <a href="#!" class="car reserved" data-bs-toggle="modal" data-bs-target="#takeCar"> 5 </a>
+          <a href="#!" class="car" data-bs-toggle="modal" data-bs-target="#addCar"> 6 </a>
+          <a href="#!" class="car" data-bs-toggle="modal" data-bs-target="#addCar"> 7 </a>
+          <a href="#!" class="car reserved" data-bs-toggle="modal" data-bs-target="#takeCar"> 8 </a>
+          <a href="#!" class="car" data-bs-toggle="modal" data-bs-target="#addCar"> 9 </a>
+          <a href="#!" class="car" data-bs-toggle="modal" data-bs-target="#addCar"> 10 </a>
+          <a href="#!" class="car" data-bs-toggle="modal" data-bs-target="#addCar"> 11 </a>
         </div>
       </div>
       <div class="parkingCol">
         <h1 class="colName"> e </h1>
         <div class="cars">
-          <a href="#!" class="car"> 1 </a>
-          <a href="#!" class="car"> 2 </a>
-          <a href="#!" class="car"> 3 </a>
-          <a href="#!" class="car"> 4 </a>
-          <a href="#!" class="car"> 5 </a>
-          <a href="#!" class="car"> 6 </a>
-          <a href="#!" class="car"> 7 </a>
-          <a href="#!" class="car"> 8 </a>
-          <a href="#!" class="car"> 9 </a>
-          <a href="#!" class="car"> 10 </a>
-          <a href="#!" class="car"> 11 </a>
+          <a href="#!" class="car" data-bs-toggle="modal" data-bs-target="#addCar"> 1 </a>
+          <a href="#!" class="car reserved" data-bs-toggle="modal" data-bs-target="#takeCar"> 2 </a>
+          <a href="#!" class="car" data-bs-toggle="modal" data-bs-target="#addCar"> 3 </a>
+          <a href="#!" class="car reserved" data-bs-toggle="modal" data-bs-target="#takeCar"> 4 </a>
+          <a href="#!" class="car" data-bs-toggle="modal" data-bs-target="#addCar"> 5 </a>
+          <a href="#!" class="car reserved" data-bs-toggle="modal" data-bs-target="#takeCar"> 6 </a>
+          <a href="#!" class="car" data-bs-toggle="modal" data-bs-target="#addCar"> 7 </a>
+          <a href="#!" class="car" data-bs-toggle="modal" data-bs-target="#addCar"> 8 </a>
+          <a href="#!" class="car" data-bs-toggle="modal" data-bs-target="#addCar"> 9 </a>
+          <a href="#!" class="car" data-bs-toggle="modal" data-bs-target="#addCar"> 10 </a>
+          <a href="#!" class="car" data-bs-toggle="modal" data-bs-target="#addCar"> 11 </a>
         </div>
       </div>
-
       <div class="parkingCol">
         <h1 class="colName"> f </h1>
         <div class="cars">
-          <a href="#!" class="car"> 1 </a>
-          <a href="#!" class="car"> 2 </a>
-          <a href="#!" class="car"> 3 </a>
-          <a href="#!" class="car"> 4 </a>
-          <a href="#!" class="car"> 5 </a>
-          <a href="#!" class="car"> 6 </a>
-          <a href="#!" class="car"> 7 </a>
-          <a href="#!" class="car"> 8 </a>
-          <a href="#!" class="car"> 9 </a>
-          <a href="#!" class="car"> 10 </a>
-          <a href="#!" class="car"> 11 </a>
+          <a href="#!" class="car" data-bs-toggle="modal" data-bs-target="#addCar"> 1 </a>
+          <a href="#!" class="car" data-bs-toggle="modal" data-bs-target="#addCar"> 2 </a>
+          <a href="#!" class="car" data-bs-toggle="modal" data-bs-target="#addCar"> 3 </a>
+          <a href="#!" class="car" data-bs-toggle="modal" data-bs-target="#addCar"> 4 </a>
+          <a href="#!" class="car" data-bs-toggle="modal" data-bs-target="#addCar"> 5 </a>
+          <a href="#!" class="car" data-bs-toggle="modal" data-bs-target="#addCar"> 6 </a>
+          <a href="#!" class="car" data-bs-toggle="modal" data-bs-target="#addCar"> 7 </a>
+          <a href="#!" class="car" data-bs-toggle="modal" data-bs-target="#addCar"> 8 </a>
+          <a href="#!" class="car" data-bs-toggle="modal" data-bs-target="#addCar"> 9 </a>
+          <a href="#!" class="car" data-bs-toggle="modal" data-bs-target="#addCar"> 10 </a>
+          <a href="#!" class="car" data-bs-toggle="modal" data-bs-target="#addCar"> 11 </a>
         </div>
       </div>
-
       <div class="parkingCol">
         <h1 class="colName"> g </h1>
         <div class="cars">
-          <a href="#!" class="car"> 1 </a>
-          <a href="#!" class="car"> 2 </a>
-          <a href="#!" class="car"> 3 </a>
-          <a href="#!" class="car"> 4 </a>
-          <a href="#!" class="car"> 5 </a>
-          <a href="#!" class="car"> 6 </a>
-          <a href="#!" class="car"> 7 </a>
-          <a href="#!" class="car"> 8 </a>
-          <a href="#!" class="car"> 9 </a>
-          <a href="#!" class="car"> 10 </a>
-          <a href="#!" class="car"> 11 </a>
+          <a href="#!" class="car" data-bs-toggle="modal" data-bs-target="#addCar"> 1 </a>
+          <a href="#!" class="car" data-bs-toggle="modal" data-bs-target="#addCar"> 2 </a>
+          <a href="#!" class="car" data-bs-toggle="modal" data-bs-target="#addCar"> 3 </a>
+          <a href="#!" class="car" data-bs-toggle="modal" data-bs-target="#addCar"> 4 </a>
+          <a href="#!" class="car" data-bs-toggle="modal" data-bs-target="#addCar"> 5 </a>
+          <a href="#!" class="car" data-bs-toggle="modal" data-bs-target="#addCar"> 6 </a>
+          <a href="#!" class="car" data-bs-toggle="modal" data-bs-target="#addCar"> 7 </a>
+          <a href="#!" class="car" data-bs-toggle="modal" data-bs-target="#addCar"> 8 </a>
+          <a href="#!" class="car" data-bs-toggle="modal" data-bs-target="#addCar"> 9 </a>
+          <a href="#!" class="car" data-bs-toggle="modal" data-bs-target="#addCar"> 10 </a>
+          <a href="#!" class="car" data-bs-toggle="modal" data-bs-target="#addCar"> 11 </a>
         </div>
       </div>
- 
-
-
+      <!-- Take car -->
+      <div class="modal fade" id="addCar" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h6 class="modal-title"> <span class="parkName"> B2 </span> اضافة سيارة </h6>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form action="">
+                <input type="text" class="form-control" placeholder=" اسم المالك ">
+                <input type="number" class="form-control" placeholder=" رقم الواتساب">
+                <div class="Btns">
+                  <button type="submit" class="btn btn-success"> اضافة </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- add Car -->
+      <div class="modal fade" id="takeCar" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h6 class="modal-title"> <span class="parkName"> A3 </span> معلومات السيارة </h6>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body ">
+              <div class="data">
+                <div class="info">
+                  <p> اسم المالك : </p>
+                  <h6> محمد العشري </h6>
+                </div>
+                <div class="info">
+                  <p> رقم الواتساب : </p>
+                  <h6> 0123456789 </h6>
+                </div>
+                <div class="info">
+                  <p> وقت الدخول : </p>
+                  <h6> 10:00 م </h6>
+                </div>
+                <div class="info">
+                  <p> المدة : </p>
+                  <h6> 3 ساعات </h6>
+                </div>
+              </div>
+            </div>
+            <div class="Btns">
+              <button type="submit" class="btn btn-dark"> اخراج السيارة</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
-
   </content>
   <!--(((((((((((((((((((((((()))))))))))))))))))))))-->
   <!--((((((((((((((((( / content )))))))))))))))))))-->
   <!--(((((((((((((((((((((((()))))))))))))))))))))))-->
   <!-- ================ Footer ================= -->
-
   <!-- ================ /Footer ================= -->
   <!--////////////////////////////////////////////////////////////////////////////////-->
   <!--////////////////////////////////////////////////////////////////////////////////-->
