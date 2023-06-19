@@ -374,10 +374,17 @@ button {
   }
 }
 
+body {
+  overflow-x: hidden;
+}
+
 .parking {
   position: relative;
   display: flex;
   padding: 100px 50px 0px;
+  overflow: auto;
+  width: 100vw;
+  height: 100vh;
   gap: 100px;
 }
 .parking .parkingCol {
