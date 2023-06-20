@@ -385,6 +385,7 @@ body {
   overflow: auto;
   width: 100vw;
   height: 100dvh;
+  min-height: 100vh;
   gap: 100px;
 }
 .parking .parkingCol {
@@ -529,7 +530,7 @@ body {
 .loginPage {
   display: flex;
   height: 100dvh;
-  min-height: -webkit-fill-available;
+  min-height: 100vh;
 }
 .loginPage .sideImg {
   flex: 1;
@@ -541,7 +542,7 @@ body {
      -moz-user-select: none;
           user-select: none;
   height: 100dvh;
-  min-height: -webkit-fill-available;
+  min-height: 100vh;
 }
 .loginPage .sideImg::after {
   content: "";
