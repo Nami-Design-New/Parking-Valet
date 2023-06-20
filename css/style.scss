@@ -350,7 +350,7 @@ body {
   padding: 100px 50px 0px;
   overflow: auto;
   width: 100vw;
-  height: 100vh;
+  height: 100dvh;
   gap: 100px;
   .parkingCol {
     display: flex;
@@ -498,7 +498,7 @@ body {
 .loginPage {
   display: flex;
   // flex-wrap: wrap;
-  height: 100vh;
+  height: 100dvh;
   min-height: -webkit-fill-available;
   // padding: 16px;
   .sideImg {
@@ -508,7 +508,7 @@ body {
     justify-content: center;
     align-items: center;
     user-select: none;
-    height: 100vh;
+    height: 100dvh;
     min-height: -webkit-fill-available;
     &::after {
       content: "";
