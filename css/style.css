@@ -156,11 +156,10 @@ input {
 .select2-container--default .select2-selection--single {
   display: flex;
   align-items: center;
-  border: 1px solid #eee;
-  min-height: 54px;
-  background-color: #fdfdfd;
+  min-height: 48px;
+  background-color: var(--whiteColor);
   border-radius: 4px;
-  padding: 0 10px;
+  padding: 0 16px;
 }
 
 .select2 {
@@ -168,7 +167,7 @@ input {
 }
 
 .select2-container--default .select2-selection--single .select2-selection__arrow {
-  left: 1px;
+  left: 8px;
   right: unset;
   top: 50%;
   transform: translateY(-50%);
@@ -196,6 +195,7 @@ span.select2.select2-container.select2-container--default {
 }
 
 .select2-container .select2-selection--single .select2-selection__rendered {
+  color: var(--darkColor);
   padding: 0px;
 }
 
@@ -578,7 +578,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 24px;
-  width: min(100% - 24px, 500px);
+  width: min(100% - 0px, 500px);
   margin: auto;
 }
 .loginPage .side form .text {
@@ -648,6 +648,7 @@ body {
   gap: 12px;
 }
 .carOrder .type .form-check .form-check-input {
+  display: none;
   float: none;
   margin: unset;
 }
@@ -665,12 +666,16 @@ body {
   width: 100%;
   height: 100%;
   display: flex;
-  flex-direction: column;
   cursor: pointer;
-  gap: 8px;
+  gap: 12px;
+  justify-content: space-between;
+  align-items: center;
+}
+.carOrder .type .form-check .form-check-label p {
+  white-space: nowrap;
 }
 .carOrder .type .form-check .form-check-input:checked ~ .form-check-label {
-  border: 3px solid var(--grayColor);
+  border: 3px solid var(--mainColor);
   background-color: var(--grayColor);
   color: var(--whiteColor);
 }
