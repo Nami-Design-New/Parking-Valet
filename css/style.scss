@@ -601,6 +601,7 @@ body {
   }
 }
 .carOrder {
+  text-align: center;
   .type {
     display: flex;
     flex-direction: column;
@@ -632,8 +633,10 @@ body {
         display: flex;
         cursor: pointer;
         gap: 12px;
-        justify-content: space-between;
+        // justify-content: space-between;
         align-items: center;
+        justify-content: center;
+        flex-direction: column;
         p {
           white-space: nowrap;
         }
