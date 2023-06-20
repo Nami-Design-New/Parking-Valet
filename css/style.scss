@@ -499,6 +499,7 @@ body {
   display: flex;
   // flex-wrap: wrap;
   height: 100vh;
+  min-height: -webkit-fill-available;
   // padding: 16px;
   .sideImg {
     flex: 1;
@@ -507,6 +508,8 @@ body {
     justify-content: center;
     align-items: center;
     user-select: none;
+    height: 100vh;
+    min-height: -webkit-fill-available;
     &::after {
       content: "";
       position: absolute;

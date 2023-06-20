@@ -529,6 +529,7 @@ body {
 .loginPage {
   display: flex;
   height: 100vh;
+  min-height: -webkit-fill-available;
 }
 .loginPage .sideImg {
   flex: 1;
@@ -539,6 +540,8 @@ body {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
+  height: 100vh;
+  min-height: -webkit-fill-available;
 }
 .loginPage .sideImg::after {
   content: "";
