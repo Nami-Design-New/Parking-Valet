@@ -168,8 +168,8 @@ input {
 }
 
 .select2-container--default .select2-selection--single .select2-selection__arrow {
-  right: 1px;
-  left: unset;
+  left: 1px;
+  right: unset;
   top: 50%;
   transform: translateY(-50%);
 }
@@ -309,7 +309,7 @@ button {
 }
 
 .tooltip {
-  --bs-tooltip-bg: var(--textlightGrayr);
+  --bs-tooltip-bg: var(--darkColor);
 }
 .tooltip .tooltip-inner {
   font-size: 10px;
@@ -524,4 +524,157 @@ body {
 }
 .modal .data .info h6 {
   font-weight: bold;
+}
+
+.loginPage {
+  display: flex;
+  height: 100vh;
+}
+.loginPage .sideImg {
+  flex: 1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.loginPage .sideImg::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(31, 31, 31, 0.3960784314);
+}
+.loginPage .sideImg img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  filter: grayscale(1);
+}
+@media screen and (max-width: 768px) {
+  .loginPage .sideImg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+  }
+  .loginPage .sideImg::after {
+    background-color: rgba(31, 31, 31, 0.8156862745);
+  }
+}
+.loginPage .side {
+  flex: 1;
+  display: flex;
+  padding: 24px;
+}
+.loginPage .side form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: min(100% - 24px, 500px);
+  margin: auto;
+}
+.loginPage .side form .text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.loginPage .side form .text .title {
+  font-weight: bold;
+  text-transform: capitalize;
+  font-size: 50px;
+}
+.loginPage .side form .form-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.loginPage .side form .btn {
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (max-width: 768px) {
+  .loginPage .side form {
+    background-color: var(--whiteColor);
+    padding: 24px;
+    border-radius: 16px;
+  }
+  .loginPage .side form .text {
+    text-align: center;
+  }
+  .loginPage .side form .text .title {
+    font-size: 30px;
+  }
+}
+
+.userLog {
+  position: fixed;
+  top: 8px;
+  right: 9px;
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  border-radius: 100px;
+  gap: 8px;
+  box-shadow: var(--BigShadow);
+  background-color: var(--whiteColor);
+  border: 2px solid #eee;
+  font-weight: bold;
+}
+.userLog .btn {
+  border-radius: 100px;
+}
+
+.carOrder .type {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.carOrder .type .form-check {
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.carOrder .type .form-check .form-check-input {
+  float: none;
+  margin: unset;
+}
+.carOrder .type .form-check .form-check-input:checked {
+  background-color: var(--mainColor);
+  border-color: var(--mainColor);
+  box-shadow: none;
+}
+.carOrder .type .form-check .form-check-label {
+  transition: var(--transition);
+  background-color: var(--whiteColor);
+  padding: 20px;
+  border-radius: 8px;
+  border: 3px solid #eee;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 8px;
+}
+.carOrder .type .form-check .form-check-input:checked ~ .form-check-label {
+  border: 3px solid var(--grayColor);
+  background-color: var(--grayColor);
+  color: var(--whiteColor);
+}
+.carOrder .btnOrange {
+  min-width: 200px;
+  margin: auto;
 }/*# sourceMappingURL=style.css.map */

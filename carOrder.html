@@ -46,23 +46,41 @@
   <!--((((((((((((((((((( content )))))))))))))))))))-->
   <!--(((((((((((((((((((((((()))))))))))))))))))))))-->
   <content>
-    <section class="loginPage">
+    <section class="loginPage carOrder">
       <div class="side">
-        <form action="index.html">
+        <form action="login.html">
           <div class="text">
-            <p class="hint"> اهلا بك في   </p>
             <h1 class="title"> Parking Valet </h1>
+            <p class="hint"> نتمني لك وقت سعيد </p>
           </div>
-          
-          <div>
-            <label class="form-label" for="userName"> <i class="fa-solid fa-user"></i> اسم المستخدم </label>
-            <input type="text" class="form-control" id="userName">
+
+
+          <div class="type">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" checked name="type" id="type1">
+              <label class="form-check-label" for="type1">
+                <p> اطلب الآن </p>
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="type" id="type2">
+              <label class="form-check-label" for="type2">
+                <p> طلب بعد مدة </p>
+
+                <select name="" class="select2">
+                  <option value=""> 5 دقيقة </option>
+                  <option value=""> 10 دقيقة </option>
+                  <option value=""> 15 دقيقة </option>
+                  <option value=""> 30 دقيقة </option>
+                  <option value=""> 45 دقيقة </option>
+                  <option value=""> 1 ساعة </option>
+                  <option value=""> 2 ساعة </option>
+                </select>
+              </label>
+            </div>
           </div>
-          <div>
-            <label class="form-label" for="password"> <i class="fa-solid fa-lock"></i> كلمة المرور </label>
-            <input type="password" class="form-control" id="password">
-          </div>
-          <button class="btn btn-dark" type="submit"> دخول </button>
+
+          <button class="btn btn-dark" type="submit"> تأكيد </button>
         </form>
       </div>
       <div class="sideImg">
@@ -89,6 +107,13 @@
   <script src="js/select2.min.js"></script>
   <!-- custom -->
   <script src="js/custom.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('.select2').select2({
+        minimumResultsForSearch: Infinity
+      });
+    });
+  </script>
 </body>
 
 </html>

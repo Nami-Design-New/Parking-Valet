@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <!-- Required meta tags -->
   <meta charset="UTF-8" />
@@ -33,7 +32,6 @@
   <!-- Custom style  -->
   <link rel="stylesheet" href="css/style.css" />
 </head>
-
 <body>
   <!-- ================ loader ================= -->
   <!-- <div class="preloader">
@@ -44,6 +42,13 @@
   <!--((((((((((((((((((( content )))))))))))))))))))-->
   <!--(((((((((((((((((((((((()))))))))))))))))))))))-->
   <content>
+    <div class="userLog">
+      <p> محمود الكومي </p>
+      <a href="carOrder.html" class="btn btn-dark" data-bs-toggle="tooltip" data-bs-placement="bottom"
+        data-bs-title=" تسجيل الخروج ">
+        <i class="fa-solid fa-power-off"></i>
+      </a>
+    </div>
     <section class="parking">
       <div class="parkingCol">
         <h1 class="colName"> A </h1>
@@ -126,7 +131,7 @@
         </div>
       </div>
       <div class="parkingCol">
-        <h1 class="colName"> g </h1>
+        <h1 class="colName"> G </h1>
         <div class="cars">
           <a href="#!" class="car" data-bs-toggle="modal" data-bs-target="#addCar"> 1 </a>
           <a href="#!" class="car" data-bs-toggle="modal" data-bs-target="#addCar"> 2 </a>
@@ -152,6 +157,7 @@
             <div class="modal-body pb-0">
               <form action="">
                 <input type="text" class="form-control" placeholder=" اسم المالك ">
+                <input type="text" class="form-control" placeholder=" رقم السيارة ">
                 <input type="number" class="form-control" placeholder=" رقم الواتساب">
                 <div class="Btns">
                   <button type="submit" class="btn btn-success"> اضافة </button>
@@ -176,8 +182,8 @@
                   <h6> محمد العشري </h6>
                 </div>
                 <div class="info">
-                  <p> رقم الواتساب : </p>
-                  <h6> 0123456789 </h6>
+                  <p> رقم السيارة : </p>
+                  <h6> م ى ن 8756 </h6>
                 </div>
                 <div class="info">
                   <p> وقت الدخول : </p>
@@ -186,6 +192,10 @@
                 <div class="info">
                   <p> المدة : </p>
                   <h6> 3 ساعات </h6>
+                </div>
+                <div class="info">
+                  <p> رقم الواتساب : </p>
+                  <h6> 0123456789 </h6>
                 </div>
               </div>
             </div>
@@ -216,5 +226,4 @@
   <!-- custom -->
   <script src="js/custom.js"></script>
 </body>
-
 </html>
