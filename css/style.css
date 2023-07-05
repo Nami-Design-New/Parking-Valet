@@ -580,6 +580,11 @@ body {
   width: 100%;
   gap: 1.5rem;
 }
+.cost_pay .data .payment form .submit {
+  justify-content: center !important;
+  background-color: var(--darkBlue);
+  border: none;
+}
 .cost_pay .data .payment .type {
   flex-direction: row;
   justify-content: space-between;
@@ -587,9 +592,6 @@ body {
 .cost_pay .data .payment .type .form-check {
   max-height: 1.5rem;
   width: 48%;
-}
-.cost_pay .data .payment .type .submit {
-  justify-content: center !important;
 }
 .cost_pay .data .payment h3 {
   color: #212529;
@@ -647,6 +649,16 @@ body {
   flex: 1;
   display: flex;
   padding: 24px;
+  flex-direction: column;
+}
+.loginPage .side .logo {
+  padding: 2.5rem 0 1.5rem;
+}
+.loginPage .side .logo img {
+  max-height: 8rem;
+}
+.loginPage .side p {
+  color: var(--darkBlue);
 }
 .loginPage .side form {
   display: flex;
@@ -665,16 +677,27 @@ body {
   text-transform: capitalize;
   font-size: 50px;
 }
+.loginPage .side form .text .logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .loginPage .side form .form-label {
   display: flex;
   align-items: center;
   gap: 8px;
+  color: var(--darkBlue);
 }
 .loginPage .side form .btn {
   padding: 12px 24px;
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: var(--darkBlue);
+  border: none;
+}
+.loginPage .side form .btn:hover {
+  background-color: #1d3b6f;
 }
 @media screen and (max-width: 768px) {
   .loginPage .side form {
@@ -885,6 +908,8 @@ body {
 }
 .type .form-check .form-check-input:checked ~ .form-check-label {
   border: 1px solid var(--mainColor);
-  background-color: var(--grayColor);
+  background-color: #2d5cad;
+}
+.type .form-check .form-check-input:checked ~ .form-check-label p {
   color: var(--whiteColor);
 }/*# sourceMappingURL=style.css.map */

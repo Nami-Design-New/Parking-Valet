@@ -535,6 +535,11 @@ body {
       form {
         width: 100%;
         gap: 1.5rem;
+        .submit {
+          justify-content: center !important;
+          background-color: var(--darkBlue);
+          border: none;
+        }
       }
       .type {
         flex-direction: row;
@@ -542,9 +547,6 @@ body {
         .form-check {
           max-height: 1.5rem;
           width: 48%;
-        }
-        .submit {
-          justify-content: center !important;
         }
       }
       h3 {
@@ -603,6 +605,16 @@ body {
     flex: 1;
     display: flex;
     padding: 24px;
+    flex-direction: column;
+    .logo {
+      padding: 2.5rem 0 1.5rem;
+      img {
+        max-height: 8rem;
+      }
+    }
+    p {
+      color: var(--darkBlue);
+    }
     form {
       display: flex;
       flex-direction: column;
@@ -618,17 +630,28 @@ body {
           text-transform: capitalize;
           font-size: 50px;
         }
+        .logo {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
       }
       .form-label {
         display: flex;
         align-items: center;
         gap: 8px;
+        color: var(--darkBlue);
       }
       .btn {
         padding: 12px 24px;
         display: flex;
         align-items: center;
         justify-content: center;
+        background-color: var(--darkBlue);
+        border: none;
+        &:hover {
+          background-color: #1d3b6f;
+        }
       }
       @media screen and (max-width: 768px) {
         background-color: var(--whiteColor);
@@ -834,8 +857,10 @@ body {
     }
     .form-check-input:checked ~ .form-check-label {
       border: 1px solid var(--mainColor);
-      background-color: var(--grayColor);
-      color: var(--whiteColor);
+      background-color: #2d5cad;
+      p {
+        color: var(--whiteColor);
+      }
     }
   }
 }
