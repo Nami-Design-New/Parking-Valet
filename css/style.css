@@ -98,16 +98,6 @@ img {
   display: inline-block;
 }
 
-.btn {
-  font-size: 12px;
-  display: flex;
-  gap: 8px;
-  align-items: center;
-}
-.btn i {
-  font-size: 16px;
-}
-
 .btn:focus {
   box-shadow: none;
 }
@@ -558,6 +548,55 @@ body {
   font-size: 12px;
 }
 
+.cost_pay {
+  padding: 2rem 3rem;
+}
+.cost_pay .data {
+  flex-direction: column;
+}
+.cost_pay .data .costt {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #d6d6d6;
+  padding: 1rem 0 1.5rem;
+}
+.cost_pay .data .costt h4 {
+  color: #212529;
+  font-size: 18px;
+  font-weight: 600;
+}
+.cost_pay .data .costt p {
+  color: #212529;
+}
+.cost_pay .data .payment {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+.cost_pay .data .payment form {
+  width: 100%;
+  gap: 1.5rem;
+}
+.cost_pay .data .payment .type {
+  flex-direction: row;
+  justify-content: space-between;
+}
+.cost_pay .data .payment .type .form-check {
+  max-height: 1.5rem;
+  width: 48%;
+}
+.cost_pay .data .payment .type .submit {
+  justify-content: center !important;
+}
+.cost_pay .data .payment h3 {
+  color: #212529;
+  font-size: 18px;
+  font-weight: 600;
+}
+
 .loginPage {
   display: flex;
   height: 100dvh;
@@ -799,29 +838,34 @@ body {
 .carOrder {
   text-align: center;
 }
-.carOrder .type {
+.carOrder .btnOrange {
+  min-width: 200px;
+  margin: auto;
+}
+
+.type {
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
-.carOrder .type .form-check {
+.type .form-check {
   cursor: pointer;
   padding: 0;
   display: flex;
   align-items: center;
   gap: 12px;
 }
-.carOrder .type .form-check .form-check-input {
+.type .form-check .form-check-input {
   display: none;
   float: none;
   margin: unset;
 }
-.carOrder .type .form-check .form-check-input:checked {
+.type .form-check .form-check-input:checked {
   background-color: var(--mainColor);
   border-color: var(--mainColor);
   box-shadow: none;
 }
-.carOrder .type .form-check .form-check-label {
+.type .form-check .form-check-label {
   transition: var(--transition);
   background-color: var(--whiteColor);
   padding: 20px;
@@ -836,15 +880,11 @@ body {
   justify-content: center;
   flex-direction: column;
 }
-.carOrder .type .form-check .form-check-label p {
+.type .form-check .form-check-label p {
   white-space: nowrap;
 }
-.carOrder .type .form-check .form-check-input:checked ~ .form-check-label {
+.type .form-check .form-check-input:checked ~ .form-check-label {
   border: 1px solid var(--mainColor);
   background-color: var(--grayColor);
   color: var(--whiteColor);
-}
-.carOrder .btnOrange {
-  min-width: 200px;
-  margin: auto;
 }/*# sourceMappingURL=style.css.map */
