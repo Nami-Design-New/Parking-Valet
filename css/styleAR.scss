@@ -483,8 +483,7 @@ body {
     }
   }
 }
-#timer,
-#timer2 {
+.timer {
   margin-top: 12px;
   display: flex;
   justify-content: center;
@@ -875,5 +874,15 @@ body {
         color: var(--whiteColor);
       }
     }
+  }
+}
+@media (max-width: 576px) {
+  .notification-center {
+    right: initial;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .loginPage .side .logo img {
+    max-height: 4rem;
   }
 }

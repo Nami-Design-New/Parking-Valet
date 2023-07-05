@@ -523,15 +523,13 @@ body {
   font-weight: bold;
 }
 
-#timer,
-#timer2 {
+.timer {
   margin-top: 12px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
-#timer div,
-#timer2 div {
+.timer div {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -545,8 +543,7 @@ body {
   font-weight: bold;
   margin: 5px;
 }
-#timer div span,
-#timer2 div span {
+.timer div span {
   display: block;
   font-size: 12px;
 }
@@ -927,4 +924,15 @@ body {
 }
 .type .form-check .form-check-input:checked ~ .form-check-label p {
   color: var(--whiteColor);
+}
+
+@media (max-width: 576px) {
+  .notification-center {
+    right: initial;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .loginPage .side .logo img {
+    max-height: 4rem;
+  }
 }/*# sourceMappingURL=styleAR.css.map */

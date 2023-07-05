@@ -256,11 +256,8 @@ $(document).ready(function() {
     }
   });
 });
-// notfications
-document.querySelector(".notifications-btn").addEventListener("click", () => {
-  document.querySelector(".notification-center").classList.toggle("open");
-});
-//count up timer
+
+//model count up timer
 window.onload = function() {
   countUpFromTime("Wed Jul 05 2023 13:17:26", "timer");
 };
@@ -275,10 +272,32 @@ function countUpFromTime(countFrom, id) {
   mins = Math.floor(
     timeDifference % secondsInADay % secondsInAHour / (60 * 1000) * 1
   );
-  document.querySelector("#timer .minutes").innerHTML = mins;
-  document.querySelector("#timer .houres").innerHTML = hours;
+  document.querySelector(".timer .minutes").innerHTML = mins;
+  document.querySelector(".timer .houres").innerHTML = hours;
   clearTimeout(countUpFromTime.interval);
   countUpFromTime.interval = setTimeout(function() {
     countUpFromTime(countFrom, id);
   }, 1000);
 }
+//car order count up
+// window.onload = function() {
+//   countUpFromTimeOrder("Wed Jul 05 2023 13:17:26", "timer2");
+// };
+// function countUpFromTimeOrder(countFrom, id) {
+//   countFrom = new Date(countFrom).getTime();
+//   var now = new Date(),
+//     countFrom = new Date(countFrom),
+//     timeDifference = now - countFrom;
+//   var secondsInADay = 60 * 60 * 1000 * 24,
+//     secondsInAHour = 60 * 60 * 1000;
+//   hours = Math.floor(timeDifference % secondsInADay / secondsInAHour * 1);
+//   mins = Math.floor(
+//     timeDifference % secondsInADay % secondsInAHour / (60 * 1000) * 1
+//   );
+//   document.querySelector("#timer2 .minutes").innerHTML = mins;
+//   document.querySelector("#timer2 .houres").innerHTML = hours;
+//   clearTimeout(countUpFromTimeOrder.interval);
+//   countUpFromTimeOrder.interval = setTimeout(function() {
+//     countUpFromTimeOrder(countFrom, id);
+//   }, 1000);
+// }
