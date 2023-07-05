@@ -1,12 +1,14 @@
 :root {
+  --darkBlue: #1d3b6f;
+  --secodary: #e2be8a;
   --mainColor: #a7a9ac;
   --whiteColor: #ffffff;
-  --darkColor: #1f1f1f;
+  --darkColor: #1d3b6f;
   --lightGrayColor: #d6d6d6;
   --grayColor: #777;
   --transition: 0.3s ease-in-out;
   --shadow: 0px 2px 4px #c1c1c1;
-  --BigShadow: 0 16px 32px 0 #071c1f1a;
+  --BigShadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 @font-face {
@@ -39,6 +41,10 @@
   background-color: #a8a8a8;
   outline: none;
   border-radius: 20px !important;
+}
+
+ul {
+  list-style: none;
 }
 
 :target {
@@ -407,7 +413,7 @@ body {
   flex: 1;
 }
 .parking .parkingCol .cars .car {
-  border: 1px solid #a0a0a0;
+  border: 1px solid rgba(29, 59, 111, 0.5843137255);
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -527,6 +533,31 @@ body {
   font-weight: bold;
 }
 
+#timer {
+  margin-top: 12px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+#timer div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #fafafa;
+  color: #000;
+  min-width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 5px;
+}
+#timer div span {
+  display: block;
+  font-size: 12px;
+}
+
 .loginPage {
   display: flex;
   height: 100dvh;
@@ -551,7 +582,7 @@ body {
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(31, 31, 31, 0.3960784314);
+  background-color: rgba(29, 59, 111, 0.3960784314);
 }
 .loginPage .sideImg img {
   width: 100%;
@@ -570,7 +601,7 @@ body {
     height: 100%;
   }
   .loginPage .sideImg::after {
-    background-color: rgba(31, 31, 31, 0.8156862745);
+    background-color: rgba(29, 59, 111, 0.8156862745);
   }
 }
 .loginPage .side {
@@ -637,6 +668,132 @@ body {
 }
 .userLog .btn {
   border-radius: 100px;
+  background-color: var(--darkBlue);
+}
+.userLog p {
+  color: var(--darkBlue);
+}
+
+.notifications-btn {
+  position: fixed;
+  top: 8px;
+  right: 190px;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  box-shadow: var(--BigShadow);
+  background-color: var(--whiteColor);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #eee;
+  cursor: pointer;
+  z-index: 99;
+}
+.notifications-btn i {
+  font-size: 22px;
+  color: var(--darkColor);
+}
+.notifications-btn small {
+  position: absolute;
+  top: 6px;
+  right: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e74a3b;
+  color: var(--whiteColor);
+  border-radius: 50%;
+  width: 16px;
+  font-size: 12px;
+  height: 16px;
+}
+
+.notification-center {
+  width: min(100% - 48px, 360px);
+  border-radius: 12px 12px 0 0;
+  position: absolute;
+  right: 35px;
+  top: 80px;
+  z-index: 999;
+  background-color: var(--whiteColor);
+  box-shadow: var(--BigShadow);
+  height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+.notification-center.open {
+  height: calc(100vh - 216px);
+}
+.notification-center h3 {
+  background-color: var(--darkColor);
+  color: var(--whiteColor);
+  font-size: 16px;
+  padding: 16px;
+}
+.notification-center ul {
+  padding: 0;
+  margin: 0;
+}
+.notification-center ul li {
+  cursor: pointer;
+  display: flex;
+  border-bottom: 1px solid #efeded;
+  padding: 1rem;
+  gap: 1rem;
+  align-items: center;
+}
+.notification-center ul li h4 {
+  background-color: var(--darkColor);
+  color: var(--whiteColor);
+  padding: 4px 8px;
+  border-radius: 8px;
+  height: 45px;
+  width: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+}
+.notification-center ul li .notifi-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+}
+.notification-center ul li .notifi-info .cost {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.notification-center ul li .notifi-info p {
+  color: #000;
+}
+.notification-center ul li .notifi-info .time {
+  color: #9c9898;
+  font-size: 12px;
+}
+.notification-center ul li .notifi-info .time b {
+  font-weight: 400;
+}
+.notification-center ul li:hover {
+  background-color: #e6e7e9;
+  transition: 0.3s ease-in-out;
+}
+.notification-center a {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  color: var(--darkBlue);
+  font-weight: 500;
+}
+.notification-center a:hover {
+  background-color: #e6e7e9;
+  transition: 0.3s ease-in-out;
 }
 
 .carOrder {

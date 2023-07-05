@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <!-- Required meta tags -->
   <meta charset="UTF-8" />
@@ -32,6 +33,7 @@
   <!-- Custom style  -->
   <link rel="stylesheet" href="css/style.css" />
 </head>
+
 <body>
   <!-- ================ loader ================= -->
   <!-- <div class="preloader">
@@ -48,6 +50,56 @@
         data-bs-title=" تسجيل الخروج ">
         <i class="fa-solid fa-power-off"></i>
       </a>
+    </div>
+    <div class="notifications-btn">
+      <small>4</small>
+      <i class="fas fa-bell"></i>
+    </div>
+    <div class="notification-center">
+      <h3>الاشعارات</h3>
+      <ul id="notifiList">
+        <li>
+          <h4 class="space-number">B1</h4>
+          <div class="notifi-info">
+            <p>اخراج السياره بعد <b>25</b> د</p>
+            <div class="cost">
+              <span>التكلفه <b>40</b> ريال</span>
+              <span class="time">05 : 16 <b class="pm_am">ص</b></span>
+            </div>
+          </div>
+        </li>
+        <li>
+          <h4 class="space-number">B1</h4>
+          <div class="notifi-info">
+            <p>اخراج السياره بعد <b>25</b> د</p>
+            <div class="cost">
+              <span>التكلفه <b>40</b> ريال</span>
+              <span class="time">05 : 16 <b class="pm_am">ص</b></span>
+            </div>
+          </div>
+        </li>
+        <li>
+          <h4 class="space-number">B1</h4>
+          <div class="notifi-info">
+            <p>اخراج السياره بعد <b>25</b> د</p>
+            <div class="cost">
+              <span>التكلفه <b>40</b> ريال</span>
+              <span class="time">05 : 16 <b class="pm_am">ص</b></span>
+            </div>
+          </div>
+        </li>
+        <li>
+          <h4 class="space-number">B1</h4>
+          <div class="notifi-info">
+            <p>اخراج السياره بعد <b>25</b> د</p>
+            <div class="cost">
+              <span>التكلفه <b>40</b> ريال</span>
+              <span class="time">05 : 16 <b class="pm_am">ص</b></span>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <a href="#">اظهار الكل</a>
     </div>
     <section class="parking">
       <div class="parkingCol">
@@ -191,7 +243,16 @@
                 </div>
                 <div class="info">
                   <p> المدة : </p>
-                  <h6> 3 ساعات </h6>
+                  <div id="timer">
+                    <div>
+                      <span class="minutes">00</span>
+                      <span>دقايق</span>
+                    </div>
+                    <div>
+                      <span class="houres">00</span>
+                      <span>ساعات</span>
+                    </div>
+                  </div>
                 </div>
                 <div class="info">
                   <p> رقم الواتساب : </p>
@@ -226,4 +287,5 @@
   <!-- custom -->
   <script src="js/custom.js"></script>
 </body>
+
 </html>

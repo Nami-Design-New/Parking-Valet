@@ -1,12 +1,14 @@
 :root {
+  --darkBlue: #1d3b6f;
+  --secodary: #e2be8a;
   --mainColor: #a7a9ac;
   --whiteColor: #ffffff;
-  --darkColor: #1f1f1f;
+  --darkColor: #1d3b6f;
   --lightGrayColor: #d6d6d6;
   --grayColor: #777;
   --transition: 0.3s ease-in-out;
   --shadow: 0px 2px 4px #c1c1c1;
-  --BigShadow: 0 16px 32px 0 #071c1f1a;
+  --BigShadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 @font-face {
   font-family: IBM;
@@ -25,7 +27,6 @@
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
-  // background-color: #eee;
   border-radius: 0px !important;
 }
 ::-webkit-scrollbar-track {
@@ -36,6 +37,9 @@
   background-color: #a8a8a8;
   outline: none;
   border-radius: 20px !important;
+}
+ul {
+  list-style: none;
 }
 :target {
   scroll-margin-top: 50px;
@@ -110,7 +114,7 @@ input {
 }
 ::placeholder {
   font-size: 12px;
-  color: #bababa !important ;
+  color: #bababa !important;
   font-weight: normal !important;
 }
 ::selection {
@@ -125,7 +129,6 @@ input {
 .select2-container--default .select2-selection--single {
   display: flex;
   align-items: center;
-  // border: 1px solid #777777;
   min-height: 48px;
   background-color: var(--whiteColor);
   border-radius: 4px;
@@ -141,7 +144,6 @@ input {
   right: unset;
   top: 50%;
   transform: translateY(-50%);
- 
 }
 span.select2.select2-container.select2-container--default {
   width: 100% !important;
@@ -165,9 +167,6 @@ span.select2.select2-container.select2-container--default {
   color: var(--darkColor);
   padding: 0px;
 }
-// .select2-container {
-//   z-index: 1060;
-// }
 .fancybox__track,
 .fancybox__content,
 .carousel__track {
@@ -370,7 +369,7 @@ body {
       padding: 140px 110px 20px;
       flex: 1;
       .car {
-        border: 1px solid #a0a0a0;
+        border: 1px solid #1d3b6f95;
         display: flex;
         align-items: center;
         justify-content: flex-start;
@@ -378,7 +377,6 @@ body {
         margin-top: -93px;
         width: 80px;
         aspect-ratio: 1/2;
-        // margin: -26px 0;
         flex-direction: column;
         font-size: 30px;
         font-weight: bold;
@@ -418,7 +416,6 @@ body {
             display: flex;
             justify-content: center;
             align-items: center;
-            // background-color: whitesmoke;
             background-image: url(../img/car.png);
             background-size: contain;
             background-repeat: no-repeat;
@@ -474,7 +471,6 @@ body {
     justify-content: center;
     gap: 4px;
     padding: 24px 16px;
-    // border-top: 1px solid #eee;
     .btn {
       border-radius: 8px;
       padding: 8px 24px;
@@ -493,6 +489,30 @@ body {
       h6 {
         font-weight: bold;
       }
+    }
+  }
+}
+#timer {
+  margin-top: 12px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #fafafa;
+    color: #000;
+    min-width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 5px;
+    span {
+      display: block;
+      font-size: 12px;
     }
   }
 }
@@ -518,7 +538,7 @@ body {
       top: 0;
       width: 100%;
       height: 100%;
-      background-color: #1f1f1f65;
+      background-color: #1d3b6f65;
       // border-radius: 24px;
     }
     img {
@@ -536,7 +556,7 @@ body {
       width: 100%;
       height: 100%;
       &::after {
-        background-color: #1f1f1fd0;
+        background-color: #1d3b6fd0;
       }
     }
   }
@@ -599,9 +619,132 @@ body {
   background-color: var(--whiteColor);
   border: 2px solid #eee;
   font-weight: bold;
-  // color: var(--whiteColor);
   .btn {
     border-radius: 100px;
+    background-color: var(--darkBlue);
+  }
+  p {
+    color: var(--darkBlue);
+  }
+}
+.notifications-btn {
+  position: fixed;
+  top: 8px;
+  right: 190px;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  box-shadow: var(--BigShadow);
+  background-color: var(--whiteColor);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #eee;
+  cursor: pointer;
+  z-index: 99;
+  i {
+    font-size: 22px;
+    color: var(--darkColor);
+  }
+  small {
+    position: absolute;
+    top: 6px;
+    right: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e74a3b;
+    color: var(--whiteColor);
+    border-radius: 50%;
+    width: 16px;
+    font-size: 12px;
+    height: 16px;
+  }
+}
+.notification-center {
+  width: min(100% - 48px, 360px);
+  border-radius: 12px 12px 0 0;
+  position: absolute;
+  right: 35px;
+  top: 80px;
+  z-index: 999;
+  background-color: var(--whiteColor);
+  box-shadow: var(--BigShadow);
+  height: 0;
+  overflow: hidden;
+  transition: all .3s ease-in-out;
+  &.open {
+    height: calc(100vh - 216px);
+  }
+  h3 {
+    background-color: var(--darkColor);
+    color: var(--whiteColor);
+    font-size: 16px;
+    padding: 16px;
+  }
+  ul {
+    padding: 0;
+    margin: 0;
+    li {
+      cursor: pointer;
+      display: flex;
+      border-bottom: 1px solid #efeded;
+      padding: 1rem;
+      gap: 1rem;
+      align-items: center;
+      h4 {
+        background-color: var(--darkColor);
+        color: var(--whiteColor);
+        padding: 4px 8px;
+        border-radius: 8px;
+        height: 45px;
+        width: 45px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+      }
+      .notifi-info {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        flex: 1;
+        .cost {
+          display: flex;
+          align-items: end;
+          justify-content: space-between;
+          gap: 8px;
+          flex-wrap: wrap;
+        }
+        p {
+          color: #000;
+        }
+        .time {
+          color: #9c9898;
+          font-size: 12px;
+          b {
+            font-weight: 400;
+          }
+        }
+      }
+      &:hover {
+        background-color: #e6e7e9;
+        transition: .3s ease-in-out;
+      }
+    }
+  }
+  a {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    color: var(--darkBlue);
+    font-weight: 500;
+    &:hover {
+      background-color: #e6e7e9;
+      transition: .3s ease-in-out;
+    }
   }
 }
 .carOrder {
