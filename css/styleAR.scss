@@ -21,7 +21,7 @@
   margin: 0;
   padding: 0;
   outline: none;
-  direction: ltr;
+  direction: rtl;
   scroll-behavior: smooth;
 }
 ::-webkit-scrollbar {
@@ -115,7 +115,7 @@ input {
 [type="number"],
 [type="tel"],
 [type="url"] {
-  direction: ltr;
+  direction: rtl;
 }
 .select2-container--default .select2-selection--single {
   display: flex;
@@ -131,8 +131,8 @@ input {
 .select2-container--default
   .select2-selection--single
   .select2-selection__arrow {
-  right: 8px;
-  left: unset;
+  left: 8px;
+  right: unset;
   top: 50%;
   transform: translateY(-50%);
 }
@@ -177,7 +177,7 @@ span.select2.select2-container.select2-container--default {
     align-items: center;
     gap: 4px;
     position: relative;
-    padding-left: 24px;
+    padding-right: 24px;
     &::after {
       content: "\f107";
       font-family: "Font Awesome 6 Pro";
@@ -185,7 +185,7 @@ span.select2.select2-container.select2-container--default {
       vertical-align: middle;
       font-size: 12px;
       position: absolute;
-      left: 8px;
+      right: 8px;
       top: 55%;
       transform: translateY(-50%);
       color: var(--grayColor);
@@ -220,8 +220,8 @@ span.select2.select2-container.select2-container--default {
     &.show {
       top: calc(100% + 10px) !important;
       display: flex;
-      right: unset;
-      left: 0;
+      left: unset;
+      right: 0;
     }
     &::before {
       content: "";
@@ -230,7 +230,7 @@ span.select2.select2-container.select2-container--default {
       background-color: var(--whiteColor);
       position: absolute;
       top: -8px;
-      left: 24px;
+      right: 24px;
       transform: rotate(45deg);
       z-index: -2;
       border: 2px solid var(--lightGrayColor);
@@ -243,7 +243,7 @@ span.select2.select2-container.select2-container--default {
       position: absolute;
       top: 0;
       z-index: -1;
-      left: 2px;
+      right: 2px;
     }
   }
   @keyframes fadeIn {
@@ -286,7 +286,7 @@ button {
   background-color: var(--darkColor);
   position: fixed;
   top: 0;
-  right: 0;
+  left: 0;
   z-index: 9999;
   width: 100%;
   height: 100%;
@@ -309,7 +309,7 @@ button {
       content: "";
       position: absolute;
       top: 50%;
-      left: 50%;
+      right: 50%;
       width: 160px;
       height: 160px;
       z-index: 2;
@@ -386,7 +386,7 @@ body {
           width: 24px;
           height: 1px;
           position: absolute;
-          right: calc(100% - 12px);
+          left: calc(100% - 12px);
           top: 0;
           background-color: var(--grayColor);
           z-index: 2;
@@ -396,7 +396,7 @@ body {
           transform: rotate(-45deg) translate(-8px, -72px);
           &::before {
             content: "";
-            right: calc(0% - 12px);
+            left: calc(0% - 12px);
           }
         }
         &.reserved {
@@ -483,7 +483,8 @@ body {
     }
   }
 }
-#timer {
+#timer,
+#timer2 {
   margin-top: 12px;
   display: flex;
   justify-content: center;
@@ -508,7 +509,7 @@ body {
   }
 }
 .cost_pay {
-  padding: 2rem 3rem;
+  padding: 2rem 3rem !important;
   .data {
     flex-direction: column;
     .costt {
@@ -516,15 +517,27 @@ body {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      border-bottom: 1px solid #d6d6d6;
-      padding: 1rem 0 1.5rem;
+      flex-direction: column;
+      gap: .5rem;
+      padding: 1rem 0;
       h4 {
+        flex: 1;
         color: #212529;
-        font-size: 18px;
+        font-size: 15px;
         font-weight: 600;
+        align-self: flex-start;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        gap: 8px;
       }
       p {
-        color: #212529;
+        color: #bababa;
+        b {
+          font-size: 40px;
+          color: #212529;
+        }
       }
     }
     .payment {
@@ -575,7 +588,7 @@ body {
     &::after {
       content: "";
       position: absolute;
-      right: 0;
+      left: 0;
       top: 0;
       width: 100%;
       height: 100%;
@@ -591,7 +604,7 @@ body {
     }
     @media screen and (max-width: 768px) {
       position: absolute;
-      right: 0;
+      left: 0;
       top: 0;
       z-index: -1;
       width: 100%;
@@ -607,9 +620,9 @@ body {
     padding: 24px;
     flex-direction: column;
     .logo {
-      padding: 2.5rem 0 1.5rem;
+      padding: 1.5rem 0 1.5rem;
       img {
-        max-height: 8rem;
+        max-height: 5rem;
       }
     }
     p {
@@ -618,7 +631,7 @@ body {
     form {
       display: flex;
       flex-direction: column;
-      gap: 24px;
+      gap: 16px;
       width: min(100% - 0px, 500px);
       margin: auto;
       .text {
@@ -670,7 +683,7 @@ body {
 .userLog {
   position: fixed;
   top: 8px;
-  left: 9px;
+  right: 9px;
   z-index: 99;
   display: flex;
   align-items: center;
@@ -691,8 +704,8 @@ body {
 }
 .notifications-btn {
   position: fixed;
-  top: 8px;
-  left: 190px;
+  top: 14px;
+  right: 190px;
   height: 50px;
   width: 50px;
   border-radius: 50%;
@@ -711,7 +724,7 @@ body {
   small {
     position: absolute;
     top: 6px;
-    left: 8px;
+    right: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -727,7 +740,7 @@ body {
   width: min(100% - 48px, 360px);
   border-radius: 12px 12px 0 0;
   position: absolute;
-  left: 35px;
+  right: 35px;
   top: 80px;
   z-index: 999;
   background-color: var(--whiteColor);
@@ -742,7 +755,7 @@ body {
     background-color: var(--darkColor);
     color: var(--whiteColor);
     font-size: 16px;
-    padding: 16px;
+    padding: 16px 22px;
   }
   ul {
     padding: 0;

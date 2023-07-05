@@ -275,7 +275,6 @@ function countUpFromTime(countFrom, id) {
   mins = Math.floor(
     timeDifference % secondsInADay % secondsInAHour / (60 * 1000) * 1
   );
-  var idEl = document.getElementById(id);
   document.querySelector("#timer .minutes").innerHTML = mins;
   document.querySelector("#timer .houres").innerHTML = hours;
   clearTimeout(countUpFromTime.interval);
