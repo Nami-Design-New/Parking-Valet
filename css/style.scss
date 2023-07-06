@@ -360,7 +360,7 @@ body {
       padding: 140px 110px 20px;
       flex: 1;
       .car {
-        border: 1px solid #1d3b6f95;
+        border: 1px solid #AAC1E9;
         display: flex;
         align-items: center;
         justify-content: flex-start;
@@ -736,7 +736,7 @@ body {
   overflow: hidden;
   transition: all .3s ease-in-out;
   &.open {
-    height: calc(100vh - 216px);
+    height: auto;
   }
   h3 {
     background-color: var(--darkColor);
