@@ -420,6 +420,11 @@
     document.querySelector(".notifications-btn").addEventListener("click", () => {
       document.querySelector(".notification-center").classList.toggle("open");
     });
+    document.querySelector(".parking").addEventListener("click", () => {
+      if (document.querySelector(".notification-center").classList.contains("open")) {
+        document.querySelector(".notification-center").classList.remove("open")
+      }
+    })
   </script>
 </body>
 
