@@ -403,7 +403,7 @@ body {
   flex: 1;
 }
 .parking .parkingCol .cars .car {
-  border: 1px solid #AAC1E9;
+  border: 1px solid #aac1e9;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -432,7 +432,7 @@ body {
   position: absolute;
   left: calc(100% - 12px);
   top: 0;
-  background-color: #AAC1E9;
+  background-color: #aac1e9;
   z-index: 2;
 }
 .parking .parkingCol .cars .car:nth-child(2n) {
@@ -947,6 +947,9 @@ body {
   .loginPage .side .logo img {
     max-height: 4rem;
   }
+  .notification-page main {
+    padding: 2rem 1rem;
+  }
 }
 .notification-page {
   width: 100%;
@@ -968,7 +971,7 @@ body {
 .notification-page main {
   box-shadow: var(--shadow);
   background-color: var(--whiteColor);
-  width: min(100% - 64px, 800px);
+  width: min(100% - 48px, 800px);
   border-radius: 16px;
   padding: 2rem;
   padding-bottom: 3rem;
