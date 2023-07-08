@@ -875,7 +875,7 @@ body {
   justify-content: center;
   padding: 1rem;
   color: var(--darkBlue);
-  font-weight: 500;
+  font-weight: 600;
 }
 .notification-center a:hover {
   background-color: #e6e7e9;
