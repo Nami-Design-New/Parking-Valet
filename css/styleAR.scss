@@ -888,19 +888,6 @@ body {
     }
   }
 }
-@media (max-width: 576px) {
-  .notification-center {
-    right: initial;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  .loginPage .side .logo img {
-    max-height: 4rem;
-  }
-  .notification-page main {
-    padding: 2rem 1rem;
-  }
-}
 .notification-page {
   width: 100%;
   display: flex;
@@ -978,5 +965,18 @@ body {
         }
       }
     }
+  }
+}
+@media (max-width: 576px) {
+  .notification-center {
+    right: initial;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .loginPage .side .logo img {
+    max-height: 4rem;
+  }
+  .notification-page main {
+    padding: 2rem 1rem;
   }
 }

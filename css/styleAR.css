@@ -938,19 +938,6 @@ body {
   color: var(--whiteColor);
 }
 
-@media (max-width: 576px) {
-  .notification-center {
-    right: initial;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  .loginPage .side .logo img {
-    max-height: 4rem;
-  }
-  .notification-page main {
-    padding: 2rem 1rem;
-  }
-}
 .notification-page {
   width: 100%;
   display: flex;
@@ -1029,4 +1016,18 @@ body {
 .notification-page main ul li:hover {
   background-color: #e6e7e9;
   transition: 0.3s ease-in-out;
+}
+
+@media (max-width: 576px) {
+  .notification-center {
+    right: initial;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .loginPage .side .logo img {
+    max-height: 4rem;
+  }
+  .notification-page main {
+    padding: 2rem 1rem;
+  }
 }/*# sourceMappingURL=styleAR.css.map */
