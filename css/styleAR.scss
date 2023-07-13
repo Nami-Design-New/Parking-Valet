@@ -432,6 +432,54 @@ body {
       color: var(--darkColor);
       font-size: 24px;
     }
+    .type {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      .form-check {
+        cursor: pointer;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        .form-check-input {
+          display: none;
+          float: none;
+          margin: unset;
+          &:checked {
+            background-color: var(--mainColor);
+            border-color: var(--mainColor);
+            box-shadow: none;
+          }
+        }
+        .form-check-label {
+          transition: var(--transition);
+          background-color: var(--whiteColor);
+          padding: 20px;
+          border-radius: 8px;
+          border: 1px solid #eee;
+          width: 100%;
+          height: 100%;
+          display: flex;
+          cursor: pointer;
+          gap: 12px;
+          // justify-content: space-between;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          p {
+            white-space: nowrap;
+          }
+        }
+        .form-check-input:checked ~ .form-check-label {
+          border: 1px solid var(--mainColor);
+          background-color: #2d5cad;
+          p {
+            color: var(--whiteColor);
+          }
+        }
+      }
+    }
     .parkName {
       font-weight: bold;
       color: var(--whiteColor);
@@ -560,6 +608,13 @@ body {
           max-height: 1.5rem;
           width: 48%;
         }
+        .form-check-input:checked ~ .form-check-label {
+          border: 1px solid var(--mainColor);
+          background-color: #2d5cad;
+          p {
+            color: var(--whiteColor);
+          }
+        }
       }
       h3 {
         color: #212529;
@@ -571,16 +626,14 @@ body {
 }
 .loginPage {
   display: flex;
-  // flex-wrap: wrap;
   height: 100dvh;
   min-height: 100vh;
-  // padding: 16px;
   .sideImg {
     flex: 1;
     position: relative;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     user-select: none;
     height: 100dvh;
     min-height: 100vh;
@@ -592,13 +645,11 @@ body {
       width: 100%;
       height: 100%;
       background-color: #1d3b6f65;
-      // border-radius: 24px;
     }
     img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      // border-radius: 24px;
       filter: grayscale(1);
     }
     @media screen and (max-width: 768px) {
@@ -616,12 +667,12 @@ body {
   .side {
     flex: 1;
     display: flex;
-    padding: 24px;
+    padding: 12px 24px;
     flex-direction: column;
     .logo {
-      padding: 1.5rem 0 1.5rem;
+      padding: 1rem 0 1rem;
       img {
-        max-height: 5rem;
+        max-height: 4rem;
       }
     }
     p {
@@ -631,7 +682,7 @@ body {
     form {
       display: flex;
       flex-direction: column;
-      gap: 16px;
+      gap: 4px;
       width: min(100% - 0px, 500px);
       margin: auto;
       .text {
@@ -843,7 +894,7 @@ body {
 .type {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 10px;
   .form-check {
     cursor: pointer;
     padding: 0;
@@ -863,7 +914,7 @@ body {
     .form-check-label {
       transition: var(--transition);
       background-color: var(--whiteColor);
-      padding: 20px;
+      padding: 14px 20px;
       border-radius: 8px;
       border: 1px solid #eee;
       width: 100%;
@@ -871,19 +922,56 @@ body {
       display: flex;
       cursor: pointer;
       gap: 12px;
-      // justify-content: space-between;
       align-items: center;
-      justify-content: center;
-      flex-direction: column;
+      justify-content: space-between;
       p {
         white-space: nowrap;
+        color: var(--grayColor);
+      }
+      i {
+        font-size: 36px;
+        color: var(--darkBlue);
+      }
+    }
+    .check_circle {
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      border: 2px solid var(--grayColor);
+      background-color: var(--whiteColor);
+    }
+    .check_box {
+      width: 16px;
+      height: 16px;
+      border: 1px solid var(--grayColor);
+      background-color: var(--whiteColor);
+      position: relative;
+      &::before {
+        content: "\f00c";
+        font-family: "Font Awesome 6\ Pro";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 14px;
+        opacity: 0;
+        color: var(--grayColor);
       }
     }
     .form-check-input:checked ~ .form-check-label {
-      border: 1px solid var(--mainColor);
-      background-color: #2d5cad;
+      border: 1px solid var(--darkBlue);
+      .check_circle {
+        border: 5px solid var(--darkBlue);
+      }
       p {
-        color: var(--whiteColor);
+        color: var(--darkBlue);
+      }
+      .check_box {
+        border: 1px solid var(--darkBlue);
+        &::before {
+          opacity: 1;
+          color: var(--darkBlue);
+        }
       }
     }
   }
