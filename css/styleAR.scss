@@ -432,54 +432,6 @@ body {
       color: var(--darkColor);
       font-size: 24px;
     }
-    .type {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-      .form-check {
-        cursor: pointer;
-        padding: 0;
-        display: flex;
-        align-items: center;
-        gap: 12px;
-        .form-check-input {
-          display: none;
-          float: none;
-          margin: unset;
-          &:checked {
-            background-color: var(--mainColor);
-            border-color: var(--mainColor);
-            box-shadow: none;
-          }
-        }
-        .form-check-label {
-          transition: var(--transition);
-          background-color: var(--whiteColor);
-          padding: 20px;
-          border-radius: 8px;
-          border: 1px solid #eee;
-          width: 100%;
-          height: 100%;
-          display: flex;
-          cursor: pointer;
-          gap: 12px;
-          // justify-content: space-between;
-          align-items: center;
-          justify-content: center;
-          flex-direction: column;
-          p {
-            white-space: nowrap;
-          }
-        }
-        .form-check-input:checked ~ .form-check-label {
-          border: 1px solid var(--mainColor);
-          background-color: #2d5cad;
-          p {
-            color: var(--whiteColor);
-          }
-        }
-      }
-    }
     .parkName {
       font-weight: bold;
       color: var(--whiteColor);
@@ -565,7 +517,7 @@ body {
       align-items: center;
       justify-content: space-between;
       flex-direction: column;
-      gap: .5rem;
+      gap: 0.5rem;
       padding: 1rem 0;
       h4 {
         flex: 1;
@@ -608,13 +560,6 @@ body {
           max-height: 1.5rem;
           width: 48%;
         }
-        .form-check-input:checked ~ .form-check-label {
-          border: 1px solid var(--mainColor);
-          background-color: #2d5cad;
-          p {
-            color: var(--whiteColor);
-          }
-        }
       }
       h3 {
         color: #212529;
@@ -626,14 +571,16 @@ body {
 }
 .loginPage {
   display: flex;
+  // flex-wrap: wrap;
   height: 100dvh;
   min-height: 100vh;
+  // padding: 16px;
   .sideImg {
     flex: 1;
     position: relative;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     user-select: none;
     height: 100dvh;
     min-height: 100vh;
@@ -645,11 +592,13 @@ body {
       width: 100%;
       height: 100%;
       background-color: #1d3b6f65;
+      // border-radius: 24px;
     }
     img {
       width: 100%;
       height: 100%;
       object-fit: cover;
+      // border-radius: 24px;
       filter: grayscale(1);
     }
     @media screen and (max-width: 768px) {
@@ -667,12 +616,12 @@ body {
   .side {
     flex: 1;
     display: flex;
-    padding: 12px 24px;
+    padding: 24px;
     flex-direction: column;
     .logo {
-      padding: 1rem 0 1rem;
+      padding: 1.5rem 0 1.5rem;
       img {
-        max-height: 4rem;
+        max-height: 5rem;
       }
     }
     p {
@@ -682,7 +631,7 @@ body {
     form {
       display: flex;
       flex-direction: column;
-      gap: 4px;
+      gap: 16px;
       width: min(100% - 0px, 500px);
       margin: auto;
       .text {
@@ -809,7 +758,7 @@ body {
   box-shadow: var(--BigShadow);
   height: 0;
   overflow: hidden;
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   &.open {
     height: auto;
   }
@@ -822,13 +771,15 @@ body {
   ul {
     padding: 0;
     margin: 0;
+    max-height: 390px;
+    overflow-y: auto;
     li {
       cursor: pointer;
       display: flex;
       border-bottom: 1px solid #efeded;
       padding: 1rem;
       gap: 1rem;
-      align-items: center;
+      // align-items: center;
       h4 {
         background-color: var(--darkColor);
         color: var(--whiteColor);
@@ -864,9 +815,17 @@ body {
           }
         }
       }
+      .carNumber {
+        font-weight: bold;
+        border: 1px solid #777 ;
+        padding: 4px 16px;
+        border-radius: 4px;
+        width: fit-content;
+        margin-bottom: 8px;
+      }
       &:hover {
         background-color: #e6e7e9;
-        transition: .3s ease-in-out;
+        transition: 0.3s ease-in-out;
       }
     }
   }
@@ -877,10 +836,11 @@ body {
     justify-content: center;
     padding: 1rem;
     color: var(--darkBlue);
-    font-weight: 600;
+    font-weight: 500;
+    box-shadow: 0px -2px 8px #00000010;
     &:hover {
       background-color: #e6e7e9;
-      transition: .3s ease-in-out;
+      transition: 0.3s ease-in-out;
     }
   }
 }
@@ -894,7 +854,7 @@ body {
 .type {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 8px;
   .form-check {
     cursor: pointer;
     padding: 0;
@@ -914,7 +874,7 @@ body {
     .form-check-label {
       transition: var(--transition);
       background-color: var(--whiteColor);
-      padding: 14px 20px;
+      padding: 20px;
       border-radius: 8px;
       border: 1px solid #eee;
       width: 100%;
@@ -922,58 +882,31 @@ body {
       display: flex;
       cursor: pointer;
       gap: 12px;
+      // justify-content: space-between;
       align-items: center;
-      justify-content: space-between;
+      justify-content: center;
+      flex-direction: column;
       p {
         white-space: nowrap;
-        color: var(--grayColor);
-      }
-      i {
-        font-size: 36px;
-        color: var(--darkBlue);
-      }
-    }
-    .check_circle {
-      width: 16px;
-      height: 16px;
-      border-radius: 50%;
-      border: 2px solid var(--grayColor);
-      background-color: var(--whiteColor);
-    }
-    .check_box {
-      width: 16px;
-      height: 16px;
-      border: 1px solid var(--grayColor);
-      background-color: var(--whiteColor);
-      position: relative;
-      &::before {
-        content: "\f00c";
-        font-family: "Font Awesome 6\ Pro";
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        font-size: 14px;
-        opacity: 0;
-        color: var(--grayColor);
       }
     }
     .form-check-input:checked ~ .form-check-label {
-      border: 1px solid var(--darkBlue);
-      .check_circle {
-        border: 5px solid var(--darkBlue);
-      }
+      border: 1px solid var(--mainColor);
+      background-color: #1c6fff;
       p {
-        color: var(--darkBlue);
-      }
-      .check_box {
-        border: 1px solid var(--darkBlue);
-        &::before {
-          opacity: 1;
-          color: var(--darkBlue);
-        }
+        color: var(--whiteColor);
       }
     }
+  }
+}
+@media (max-width: 576px) {
+  .notification-center {
+    right: initial;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .loginPage .side .logo img {
+    max-height: 4rem;
   }
 }
 .notification-page {
@@ -993,12 +926,11 @@ body {
     }
   }
   main {
-    box-shadow: var(--shadow);
+    box-shadow: var(--BigShadow);
     background-color: var(--whiteColor);
-    width: min(100% - 48px, 800px);
+    width: min(100% - 64px, 800px);
     border-radius: 16px;
-    padding: 2rem;
-    padding-bottom: 3rem;
+    padding: 1rem 2rem;
     ul {
       padding: 0;
       margin: 0;
@@ -1008,7 +940,15 @@ body {
         border-bottom: 1px solid #efeded;
         padding: 1rem;
         gap: 1rem;
-        align-items: center;
+        // align-items: center;
+        .carNumber {
+          font-weight: bold;
+          border: 1px solid #777 ;
+          padding: 4px 16px;
+          border-radius: 4px;
+          width: fit-content;
+          margin-bottom: 8px;
+        }
         &:last-child {
           border-bottom: 0;
         }
@@ -1049,22 +989,123 @@ body {
         }
         &:hover {
           background-color: #e6e7e9;
-          transition: .3s ease-in-out;
+          transition: 0.3s ease-in-out;
         }
       }
     }
   }
 }
-@media (max-width: 576px) {
-  .notification-center {
-    right: initial;
-    left: 50%;
-    transform: translateX(-50%);
+
+.selectLanguage {
+  padding: 8px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  .form-label {
+    font-weight: bold;
+    margin-bottom: 0;
   }
-  .loginPage .side .logo img {
-    max-height: 4rem;
+  .type {
+    flex-direction: row;
+    .form-check {
+      flex: 1;
+      .form-check-label {
+        padding: 12px;
+      }
+    }
   }
-  .notification-page main {
-    padding: 2rem 1rem;
+}
+
+.pagination{
+  justify-content: center;
+  padding-top: 48px;
+}
+
+
+.carOrder{
+  .typeCarOrder {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    .form-check {
+      cursor: pointer;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      .form-check-input {
+        display: none;
+        float: none;
+        margin: unset;
+        &:checked {
+          background-color: var(--mainColor);
+          border-color: var(--mainColor);
+          box-shadow: none;
+        }
+      }
+      .form-check-label {
+        transition: var(--transition);
+        background-color: var(--whiteColor);
+        padding: 14px 20px;
+        border-radius: 8px;
+        border: 1px solid #eee;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        cursor: pointer;
+        gap: 12px;
+        align-items: center;
+        justify-content: space-between;
+        p {
+          white-space: nowrap;
+          color: var(--grayColor);
+        }
+        i {
+          font-size: 36px;
+          color: var(--darkBlue);
+        }
+      }
+      .check_circle {
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        border: 2px solid var(--grayColor);
+        background-color: var(--whiteColor);
+      }
+      .check_box {
+        width: 16px;
+        height: 16px;
+        border: 1px solid var(--grayColor);
+        background-color: var(--whiteColor);
+        position: relative;
+        &::before {
+          content: "\f00c";
+          font-family: "Font Awesome 6\ Pro";
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          font-size: 14px;
+          opacity: 0;
+          color: var(--grayColor);
+        }
+      }
+      .form-check-input:checked ~ .form-check-label {
+        border: 1px solid var(--darkBlue);
+        .check_circle {
+          border: 5px solid var(--darkBlue);
+        }
+        p {
+          color: var(--darkBlue);
+        }
+        .check_box {
+          border: 1px solid var(--darkBlue);
+          &::before {
+            opacity: 1;
+            color: var(--darkBlue);
+          }
+        }
+      }
+    }
   }
 }

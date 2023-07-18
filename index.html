@@ -61,7 +61,12 @@
       <ul id="notifiList">
         <li>
           <h4 class="space-number">B1</h4>
+          
           <div class="notifi-info">
+            <div class="carNumber">
+               م ى ن 8756 
+           </div>
+            
             <p>اخراج السياره بعد <b>25</b> د</p>
             <div class="cost">
               <span>التكلفه <b>40</b> ريال</span>
@@ -72,6 +77,9 @@
         <li>
           <h4 class="space-number">B1</h4>
           <div class="notifi-info">
+            <div class="carNumber">
+               م ى ن 8756 
+           </div>
             <p>اخراج السياره بعد <b>25</b> د</p>
             <div class="cost">
               <span>التكلفه <b>40</b> ريال</span>
@@ -82,6 +90,9 @@
         <li>
           <h4 class="space-number">B1</h4>
           <div class="notifi-info">
+            <div class="carNumber">
+               م ى ن 8756 
+           </div>
             <p>اخراج السياره بعد <b>25</b> د</p>
             <div class="cost">
               <span>التكلفه <b>40</b> ريال</span>
@@ -92,6 +103,9 @@
         <li>
           <h4 class="space-number">B1</h4>
           <div class="notifi-info">
+            <div class="carNumber">
+               م ى ن 8756 
+           </div>
             <p>اخراج السياره بعد <b>25</b> د</p>
             <div class="cost">
               <span>التكلفه <b>40</b> ريال</span>
@@ -212,6 +226,26 @@
                 <input type="text" class="form-control" placeholder=" اسم المالك ">
                 <input type="text" class="form-control" placeholder=" رقم السيارة ">
                 <input type="number" class="form-control" placeholder=" رقم الواتساب">
+
+                <div class="selectLanguage">
+                  <label class="form-label"> لغة الرسالة </label>
+                  <div class="type">
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" checked name="language" id="ar">
+                      <label class="form-check-label" for="ar">
+                        <p> عربي </p>
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="language" id="EN">
+                      <label class="form-check-label" for="EN">
+                        <p>English</p>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+
+
                 <div class="Btns">
                   <button type="submit" class="btn btn-success"> اضافة </button>
                 </div>
@@ -420,11 +454,6 @@
     document.querySelector(".notifications-btn").addEventListener("click", () => {
       document.querySelector(".notification-center").classList.toggle("open");
     });
-    document.querySelector(".parking").addEventListener("click", () => {
-      if (document.querySelector(".notification-center").classList.contains("open")) {
-        document.querySelector(".notification-center").classList.remove("open")
-      }
-    })
   </script>
 </body>
 

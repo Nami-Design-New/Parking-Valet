@@ -22,7 +22,6 @@
   margin: 0;
   padding: 0;
   outline: none;
-  direction: ltr;
   scroll-behavior: smooth;
 }
 
@@ -146,7 +145,7 @@ input {
 [type=number],
 [type=tel],
 [type=url] {
-  direction: ltr;
+  direction: rtl;
 }
 
 .select2-container--default .select2-selection--single {
@@ -352,7 +351,7 @@ button {
   height: 160px;
   z-index: 2;
   background-color: var(--mainColor);
-  transform: translate(50%, -50%);
+  transform: translate(-50%, -50%);
   animation: slide-up 1.5s forwards;
 }
 @media screen and (max-width: 1024px) {
@@ -363,10 +362,10 @@ button {
 }
 @keyframes slide-up {
   from {
-    transform: translate(50%, 50%);
+    transform: translate(-50%, 50%);
   }
   to {
-    transform: translate(50%, -50%);
+    transform: translate(-50%, -50%);
   }
 }
 
@@ -403,7 +402,7 @@ body {
   flex: 1;
 }
 .parking .parkingCol .cars .car {
-  border: 1px solid #AAC1E9;
+  border: 1px solid #aac1e9;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -432,12 +431,12 @@ body {
   position: absolute;
   right: calc(100% - 12px);
   top: 0;
-  background-color: var(--grayColor);
+  background-color: #aac1e9;
   z-index: 2;
 }
 .parking .parkingCol .cars .car:nth-child(2n) {
   margin-top: -115px;
-  transform: rotate(-45deg) translate(-8px, -72px);
+  transform: rotate(-45deg) translate(8px, -72px);
 }
 .parking .parkingCol .cars .car:nth-child(2n)::before {
   content: "";
@@ -523,13 +522,13 @@ body {
   font-weight: bold;
 }
 
-#timer {
+.timer {
   margin-top: 12px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
-#timer div {
+.timer div {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -543,13 +542,13 @@ body {
   font-weight: bold;
   margin: 5px;
 }
-#timer div span {
+.timer div span {
   display: block;
   font-size: 12px;
 }
 
 .cost_pay {
-  padding: 2rem 3rem;
+  padding: 2rem 3rem !important;
 }
 .cost_pay .data {
   flex-direction: column;
@@ -559,15 +558,27 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid #d6d6d6;
-  padding: 1rem 0 1.5rem;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem 0;
 }
 .cost_pay .data .costt h4 {
+  flex: 1;
   color: #212529;
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 600;
+  align-self: flex-start;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 8px;
 }
 .cost_pay .data .costt p {
+  color: #bababa;
+}
+.cost_pay .data .costt p b {
+  font-size: 40px;
   color: #212529;
 }
 .cost_pay .data .payment {
@@ -652,18 +663,19 @@ body {
   flex-direction: column;
 }
 .loginPage .side .logo {
-  padding: 2.5rem 0 1.5rem;
+  padding: 1.5rem 0 1.5rem;
 }
 .loginPage .side .logo img {
-  max-height: 8rem;
+  max-height: 5rem;
 }
 .loginPage .side p {
   color: var(--darkBlue);
+  text-align: center;
 }
 .loginPage .side form {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 16px;
   width: min(100% - 0px, 500px);
   margin: auto;
 }
@@ -738,7 +750,7 @@ body {
 
 .notifications-btn {
   position: fixed;
-  top: 8px;
+  top: 14px;
   left: 190px;
   height: 50px;
   width: 50px;
@@ -770,6 +782,16 @@ body {
   font-size: 12px;
   height: 16px;
 }
+.notifications-btn a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.notifications-btn a i {
+  font-size: 18px;
+}
 
 .notification-center {
   width: min(100% - 48px, 360px);
@@ -791,11 +813,13 @@ body {
   background-color: var(--darkColor);
   color: var(--whiteColor);
   font-size: 16px;
-  padding: 16px;
+  padding: 16px 22px;
 }
 .notification-center ul {
   padding: 0;
   margin: 0;
+  max-height: 390px;
+  overflow-y: auto;
 }
 .notification-center ul li {
   cursor: pointer;
@@ -803,7 +827,6 @@ body {
   border-bottom: 1px solid #efeded;
   padding: 1rem;
   gap: 1rem;
-  align-items: center;
 }
 .notification-center ul li h4 {
   background-color: var(--darkColor);
@@ -840,6 +863,15 @@ body {
 .notification-center ul li .notifi-info .time b {
   font-weight: 400;
 }
+.notification-center ul li .carNumber {
+  font-weight: bold;
+  border: 1px solid #777;
+  padding: 4px 16px;
+  border-radius: 4px;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-bottom: 8px;
+}
 .notification-center ul li:hover {
   background-color: #e6e7e9;
   transition: 0.3s ease-in-out;
@@ -852,6 +884,7 @@ body {
   padding: 1rem;
   color: var(--darkBlue);
   font-weight: 500;
+  box-shadow: 0px -2px 8px rgba(0, 0, 0, 0.062745098);
 }
 .notification-center a:hover {
   background-color: #e6e7e9;
@@ -907,9 +940,217 @@ body {
   white-space: nowrap;
 }
 .type .form-check .form-check-input:checked ~ .form-check-label {
-  border: 1px solid var(--mainColor);
-  background-color: #2d5cad;
+  border: 1px solid #1c6fff;
+  background-color: var(--darkColor);
 }
 .type .form-check .form-check-input:checked ~ .form-check-label p {
   color: var(--whiteColor);
+}
+
+@media (max-width: 576px) {
+  .notification-center {
+    left: initial;
+    right: 50%;
+    transform: translateX(50%);
+  }
+  .loginPage .side .logo img {
+    max-height: 4rem;
+  }
+}
+.notification-page {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6rem 0;
+}
+.notification-page h1 {
+  border-bottom: 1px solid #efeded;
+  color: var(--darkBlue);
+  font-size: 22px;
+  padding: 1rem;
+}
+.notification-page h1 i {
+  color: var(--grayColor);
+  font-size: 18px;
+}
+.notification-page main {
+  box-shadow: var(--BigShadow);
+  background-color: var(--whiteColor);
+  width: min(100% - 64px, 800px);
+  border-radius: 16px;
+  padding: 1rem 2rem;
+}
+.notification-page main ul {
+  padding: 0;
+  margin: 0;
+}
+.notification-page main ul li {
+  cursor: pointer;
+  display: flex;
+  border-bottom: 1px solid #efeded;
+  padding: 1rem;
+  gap: 1rem;
+}
+.notification-page main ul li .carNumber {
+  font-weight: bold;
+  border: 1px solid #777;
+  padding: 4px 16px;
+  border-radius: 4px;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-bottom: 8px;
+}
+.notification-page main ul li:last-child {
+  border-bottom: 0;
+}
+.notification-page main ul li h4 {
+  background-color: var(--darkColor);
+  color: var(--whiteColor);
+  padding: 4px 8px;
+  border-radius: 8px;
+  height: 45px;
+  width: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+}
+.notification-page main ul li .notifi-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+}
+.notification-page main ul li .notifi-info .cost {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.notification-page main ul li .notifi-info p {
+  color: #000;
+}
+.notification-page main ul li .notifi-info .time {
+  color: #9c9898;
+  font-size: 12px;
+}
+.notification-page main ul li .notifi-info .time b {
+  font-weight: 400;
+}
+.notification-page main ul li:hover {
+  background-color: #e6e7e9;
+  transition: 0.3s ease-in-out;
+}
+
+.selectLanguage {
+  padding: 8px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.selectLanguage .form-label {
+  font-weight: bold;
+  margin-bottom: 0;
+}
+.selectLanguage .type {
+  flex-direction: row;
+}
+.selectLanguage .type .form-check {
+  flex: 1;
+}
+.selectLanguage .type .form-check .form-check-label {
+  padding: 12px;
+}
+
+.pagination {
+  justify-content: center;
+  padding-top: 48px;
+}
+
+.carOrder .typeCarOrder {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.carOrder .typeCarOrder .form-check {
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.carOrder .typeCarOrder .form-check .form-check-input {
+  display: none;
+  float: none;
+  margin: unset;
+}
+.carOrder .typeCarOrder .form-check .form-check-input:checked {
+  background-color: var(--mainColor);
+  border-color: var(--mainColor);
+  box-shadow: none;
+}
+.carOrder .typeCarOrder .form-check .form-check-label {
+  transition: var(--transition);
+  background-color: var(--whiteColor);
+  padding: 14px 20px;
+  border-radius: 8px;
+  border: 1px solid #eee;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  cursor: pointer;
+  gap: 12px;
+  align-items: center;
+  justify-content: space-between;
+}
+.carOrder .typeCarOrder .form-check .form-check-label p {
+  white-space: nowrap;
+  color: var(--grayColor);
+}
+.carOrder .typeCarOrder .form-check .form-check-label i {
+  font-size: 36px;
+  color: var(--darkBlue);
+}
+.carOrder .typeCarOrder .form-check .check_circle {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid var(--grayColor);
+  background-color: var(--whiteColor);
+}
+.carOrder .typeCarOrder .form-check .check_box {
+  width: 16px;
+  height: 16px;
+  border: 1px solid var(--grayColor);
+  background-color: var(--whiteColor);
+  position: relative;
+}
+.carOrder .typeCarOrder .form-check .check_box::before {
+  content: "\f00c";
+  font-family: "Font Awesome 6 Pro";
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  font-size: 14px;
+  opacity: 0;
+  color: var(--grayColor);
+}
+.carOrder .typeCarOrder .form-check .form-check-input:checked ~ .form-check-label {
+  border: 1px solid var(--darkBlue);
+}
+.carOrder .typeCarOrder .form-check .form-check-input:checked ~ .form-check-label .check_circle {
+  border: 5px solid var(--darkBlue);
+}
+.carOrder .typeCarOrder .form-check .form-check-input:checked ~ .form-check-label p {
+  color: var(--darkBlue);
+}
+.carOrder .typeCarOrder .form-check .form-check-input:checked ~ .form-check-label .check_box {
+  border: 1px solid var(--darkBlue);
+}
+.carOrder .typeCarOrder .form-check .form-check-input:checked ~ .form-check-label .check_box::before {
+  opacity: 1;
+  color: var(--darkBlue);
 }/*# sourceMappingURL=style.css.map */

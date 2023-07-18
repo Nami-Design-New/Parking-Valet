@@ -473,53 +473,6 @@ body {
   color: var(--darkColor);
   font-size: 24px;
 }
-.modal .modal-title .type {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-.modal .modal-title .type .form-check {
-  cursor: pointer;
-  padding: 0;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-.modal .modal-title .type .form-check .form-check-input {
-  display: none;
-  float: none;
-  margin: unset;
-}
-.modal .modal-title .type .form-check .form-check-input:checked {
-  background-color: var(--mainColor);
-  border-color: var(--mainColor);
-  box-shadow: none;
-}
-.modal .modal-title .type .form-check .form-check-label {
-  transition: var(--transition);
-  background-color: var(--whiteColor);
-  padding: 20px;
-  border-radius: 8px;
-  border: 1px solid #eee;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  cursor: pointer;
-  gap: 12px;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-.modal .modal-title .type .form-check .form-check-label p {
-  white-space: nowrap;
-}
-.modal .modal-title .type .form-check .form-check-input:checked ~ .form-check-label {
-  border: 1px solid var(--mainColor);
-  background-color: #2d5cad;
-}
-.modal .modal-title .type .form-check .form-check-input:checked ~ .form-check-label p {
-  color: var(--whiteColor);
-}
 .modal .modal-title .parkName {
   font-weight: bold;
   color: var(--whiteColor);
@@ -652,13 +605,6 @@ body {
   max-height: 1.5rem;
   width: 48%;
 }
-.cost_pay .data .payment .type .form-check-input:checked ~ .form-check-label {
-  border: 1px solid var(--mainColor);
-  background-color: #2d5cad;
-}
-.cost_pay .data .payment .type .form-check-input:checked ~ .form-check-label p {
-  color: var(--whiteColor);
-}
 .cost_pay .data .payment h3 {
   color: #212529;
   font-size: 18px;
@@ -674,8 +620,8 @@ body {
   flex: 1;
   position: relative;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
@@ -714,14 +660,14 @@ body {
 .loginPage .side {
   flex: 1;
   display: flex;
-  padding: 12px 24px;
+  padding: 24px;
   flex-direction: column;
 }
 .loginPage .side .logo {
-  padding: 1rem 0 1rem;
+  padding: 1.5rem 0 1.5rem;
 }
 .loginPage .side .logo img {
-  max-height: 4rem;
+  max-height: 5rem;
 }
 .loginPage .side p {
   color: var(--darkBlue);
@@ -730,7 +676,7 @@ body {
 .loginPage .side form {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 16px;
   width: min(100% - 0px, 500px);
   margin: auto;
 }
@@ -874,6 +820,8 @@ body {
 .notification-center ul {
   padding: 0;
   margin: 0;
+  max-height: 390px;
+  overflow-y: auto;
 }
 .notification-center ul li {
   cursor: pointer;
@@ -881,7 +829,6 @@ body {
   border-bottom: 1px solid #efeded;
   padding: 1rem;
   gap: 1rem;
-  align-items: center;
 }
 .notification-center ul li h4 {
   background-color: var(--darkColor);
@@ -918,6 +865,15 @@ body {
 .notification-center ul li .notifi-info .time b {
   font-weight: 400;
 }
+.notification-center ul li .carNumber {
+  font-weight: bold;
+  border: 1px solid #777;
+  padding: 4px 16px;
+  border-radius: 4px;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-bottom: 8px;
+}
 .notification-center ul li:hover {
   background-color: #e6e7e9;
   transition: 0.3s ease-in-out;
@@ -929,7 +885,8 @@ body {
   justify-content: center;
   padding: 1rem;
   color: var(--darkBlue);
-  font-weight: 600;
+  font-weight: 500;
+  box-shadow: 0px -2px 8px rgba(0, 0, 0, 0.062745098);
 }
 .notification-center a:hover {
   background-color: #e6e7e9;
@@ -947,7 +904,7 @@ body {
 .type {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 8px;
 }
 .type .form-check {
   cursor: pointer;
@@ -969,7 +926,7 @@ body {
 .type .form-check .form-check-label {
   transition: var(--transition);
   background-color: var(--whiteColor);
-  padding: 14px 20px;
+  padding: 20px;
   border-radius: 8px;
   border: 1px solid #eee;
   width: 100%;
@@ -978,58 +935,30 @@ body {
   cursor: pointer;
   gap: 12px;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  flex-direction: column;
 }
 .type .form-check .form-check-label p {
   white-space: nowrap;
-  color: var(--grayColor);
-}
-.type .form-check .form-check-label i {
-  font-size: 36px;
-  color: var(--darkBlue);
-}
-.type .form-check .check_circle {
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  border: 2px solid var(--grayColor);
-  background-color: var(--whiteColor);
-}
-.type .form-check .check_box {
-  width: 16px;
-  height: 16px;
-  border: 1px solid var(--grayColor);
-  background-color: var(--whiteColor);
-  position: relative;
-}
-.type .form-check .check_box::before {
-  content: "\f00c";
-  font-family: "Font Awesome 6 Pro";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 14px;
-  opacity: 0;
-  color: var(--grayColor);
 }
 .type .form-check .form-check-input:checked ~ .form-check-label {
-  border: 1px solid var(--darkBlue);
-}
-.type .form-check .form-check-input:checked ~ .form-check-label .check_circle {
-  border: 5px solid var(--darkBlue);
+  border: 1px solid var(--mainColor);
+  background-color: #1c6fff;
 }
 .type .form-check .form-check-input:checked ~ .form-check-label p {
-  color: var(--darkBlue);
-}
-.type .form-check .form-check-input:checked ~ .form-check-label .check_box {
-  border: 1px solid var(--darkBlue);
-}
-.type .form-check .form-check-input:checked ~ .form-check-label .check_box::before {
-  opacity: 1;
-  color: var(--darkBlue);
+  color: var(--whiteColor);
 }
 
+@media (max-width: 576px) {
+  .notification-center {
+    right: initial;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .loginPage .side .logo img {
+    max-height: 4rem;
+  }
+}
 .notification-page {
   width: 100%;
   display: flex;
@@ -1048,12 +977,11 @@ body {
   font-size: 18px;
 }
 .notification-page main {
-  box-shadow: var(--shadow);
+  box-shadow: var(--BigShadow);
   background-color: var(--whiteColor);
-  width: min(100% - 48px, 800px);
+  width: min(100% - 64px, 800px);
   border-radius: 16px;
-  padding: 2rem;
-  padding-bottom: 3rem;
+  padding: 1rem 2rem;
 }
 .notification-page main ul {
   padding: 0;
@@ -1065,7 +993,15 @@ body {
   border-bottom: 1px solid #efeded;
   padding: 1rem;
   gap: 1rem;
-  align-items: center;
+}
+.notification-page main ul li .carNumber {
+  font-weight: bold;
+  border: 1px solid #777;
+  padding: 4px 16px;
+  border-radius: 4px;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-bottom: 8px;
 }
 .notification-page main ul li:last-child {
   border-bottom: 0;
@@ -1110,16 +1046,113 @@ body {
   transition: 0.3s ease-in-out;
 }
 
-@media (max-width: 576px) {
-  .notification-center {
-    right: initial;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  .loginPage .side .logo img {
-    max-height: 4rem;
-  }
-  .notification-page main {
-    padding: 2rem 1rem;
-  }
+.selectLanguage {
+  padding: 8px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.selectLanguage .form-label {
+  font-weight: bold;
+  margin-bottom: 0;
+}
+.selectLanguage .type {
+  flex-direction: row;
+}
+.selectLanguage .type .form-check {
+  flex: 1;
+}
+.selectLanguage .type .form-check .form-check-label {
+  padding: 12px;
+}
+
+.pagination {
+  justify-content: center;
+  padding-top: 48px;
+}
+
+.carOrder .typeCarOrder {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.carOrder .typeCarOrder .form-check {
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.carOrder .typeCarOrder .form-check .form-check-input {
+  display: none;
+  float: none;
+  margin: unset;
+}
+.carOrder .typeCarOrder .form-check .form-check-input:checked {
+  background-color: var(--mainColor);
+  border-color: var(--mainColor);
+  box-shadow: none;
+}
+.carOrder .typeCarOrder .form-check .form-check-label {
+  transition: var(--transition);
+  background-color: var(--whiteColor);
+  padding: 14px 20px;
+  border-radius: 8px;
+  border: 1px solid #eee;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  cursor: pointer;
+  gap: 12px;
+  align-items: center;
+  justify-content: space-between;
+}
+.carOrder .typeCarOrder .form-check .form-check-label p {
+  white-space: nowrap;
+  color: var(--grayColor);
+}
+.carOrder .typeCarOrder .form-check .form-check-label i {
+  font-size: 36px;
+  color: var(--darkBlue);
+}
+.carOrder .typeCarOrder .form-check .check_circle {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid var(--grayColor);
+  background-color: var(--whiteColor);
+}
+.carOrder .typeCarOrder .form-check .check_box {
+  width: 16px;
+  height: 16px;
+  border: 1px solid var(--grayColor);
+  background-color: var(--whiteColor);
+  position: relative;
+}
+.carOrder .typeCarOrder .form-check .check_box::before {
+  content: "\f00c";
+  font-family: "Font Awesome 6 Pro";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 14px;
+  opacity: 0;
+  color: var(--grayColor);
+}
+.carOrder .typeCarOrder .form-check .form-check-input:checked ~ .form-check-label {
+  border: 1px solid var(--darkBlue);
+}
+.carOrder .typeCarOrder .form-check .form-check-input:checked ~ .form-check-label .check_circle {
+  border: 5px solid var(--darkBlue);
+}
+.carOrder .typeCarOrder .form-check .form-check-input:checked ~ .form-check-label p {
+  color: var(--darkBlue);
+}
+.carOrder .typeCarOrder .form-check .form-check-input:checked ~ .form-check-label .check_box {
+  border: 1px solid var(--darkBlue);
+}
+.carOrder .typeCarOrder .form-check .form-check-input:checked ~ .form-check-label .check_box::before {
+  opacity: 1;
+  color: var(--darkBlue);
 }/*# sourceMappingURL=styleAR.css.map */
