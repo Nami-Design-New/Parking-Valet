@@ -676,7 +676,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  width: min(100% - 0px, 500px);
+  width: min(100% - 0px, 550px);
   margin: auto;
 }
 .loginPage .side form .text {
@@ -1104,6 +1104,7 @@ body {
   gap: 12px;
   align-items: center;
   justify-content: space-between;
+  flex-direction: row-reverse;
 }
 .carOrder .typeCarOrder .form-check .form-check-label p {
   white-space: nowrap;
@@ -1153,4 +1154,44 @@ body {
 .carOrder .typeCarOrder .form-check .form-check-input:checked ~ .form-check-label .check_box::before {
   opacity: 1;
   color: var(--darkBlue);
+}
+
+.userPaymentMethod {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 8px;
+  background-color: rgba(226, 190, 138, 0.1254901961);
+  border-radius: 8px;
+}
+.userPaymentMethod .form-check {
+  flex: 1;
+}
+.userPaymentMethod .form-check .check_box {
+  display: none;
+}
+.userPaymentMethod .form-check .form-check-label {
+  text-transform: capitalize;
+  white-space: nowrap;
+  justify-content: start !important;
+  flex-direction: row !important;
+  padding: 12px !important;
+  gap: 8px !important;
+}
+.userPaymentMethod .form-check .form-check-label i {
+  font-size: 30px !important;
+}
+.userPaymentMethod .form-check .form-check-input:checked ~ .form-check-label {
+  background-color: var(--secodary) !important;
+  color: var(--darkBlue);
+  border-color: transparent !important;
+}
+.userPaymentMethod .form-check .form-check-input:checked ~ .form-check-label i {
+  color: var(--darkBlue);
+}
+
+@media (max-width: 768px) {
+  .loginPage .side {
+    padding: 12px;
+  }
 }/*# sourceMappingURL=style.css.map */

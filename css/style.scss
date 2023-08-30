@@ -631,7 +631,7 @@ body {
       display: flex;
       flex-direction: column;
       gap: 16px;
-      width: min(100% - 0px, 500px);
+      width: min(100% - 0px, 550px);
       margin: auto;
       .text {
         display: flex;
@@ -1055,6 +1055,7 @@ body {
         gap: 12px;
         align-items: center;
         justify-content: space-between;
+        flex-direction: row-reverse;
         p {
           white-space: nowrap;
           color: var(--grayColor);
@@ -1106,5 +1107,46 @@ body {
         }
       }
     }
+  }
+}
+
+
+.userPaymentMethod {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 8px;
+  background-color: #E2BE8A20;
+  border-radius: 8px;
+  .form-check {
+    flex: 1;
+    .check_box {
+      display: none;
+    }
+    .form-check-label {
+      text-transform: capitalize;
+      white-space: nowrap;
+      justify-content: start !important;
+      flex-direction: row !important;
+      padding: 12px !important;
+      gap: 8px !important;
+      i {
+        font-size: 30px !important;
+      }
+    }
+  }
+  .form-check .form-check-input:checked ~ .form-check-label {
+    background-color: var(--secodary) !important;
+    color: var(--darkBlue);
+    border-color:transparent !important ;
+    i{
+      color: var(--darkBlue);
+    }
+  }
+}
+
+.loginPage .side {
+  @media (max-width: 768px) {
+    padding: 12px;
   }
 }
